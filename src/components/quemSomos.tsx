@@ -1,4 +1,5 @@
-import { ambiente, chefe } from '@assets/index';
+import ambiente from '@assets/ambiente.jpg';
+import chefe from '@assets/chefe.jpg';
 
 export function QuemSomos() {
   return (
