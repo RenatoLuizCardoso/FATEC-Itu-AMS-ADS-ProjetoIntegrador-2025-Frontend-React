@@ -1,3 +1,6 @@
+import ambiente from '@assets/ambiente.jpg';
+import chefe from '@assets/chefe.jpg';
+
 export function QuemSomos() {
   return (
     <section className="px-6 py-16 bg-yellow-50 text-amber-900">
@@ -32,7 +35,7 @@ export function QuemSomos() {
             </p>
           </div>
           <img
-            src="/ambiente.jpg"
+            src={ambiente}
             alt="Interior do restaurante"
             className="rounded-2xl shadow-xl object-cover w-full max-w-xl transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl"
           />
@@ -53,7 +56,7 @@ export function QuemSomos() {
             </p>
           </div>
           <img
-            src="/chefe.jpg"
+            src={chefe}
             alt="Foto do Chef Roberto"
             className="rounded-2xl shadow-xl object-cover w-full max-w-xl transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl"
           />
