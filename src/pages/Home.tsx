@@ -1,5 +1,5 @@
-import { HelloWorld } from '@components/helloWorld';
-import { Navbar } from '@components/navbar';
+// import { HelloWorld } from '@components/helloWorld';
+import { Navbar } from '@components/Navbar';
 import { QuemSomos } from '@components/quemSomos';
 
 export function Home() {
