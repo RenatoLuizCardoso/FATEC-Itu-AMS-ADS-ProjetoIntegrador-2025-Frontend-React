@@ -1,6 +1,7 @@
 import { Hero } from '@components/Hero';
 // import { HelloWorld } from '@components/helloWorld';
 import { Navbar } from '@components/Navbar';
+import { Footer } from '@components/footer';
 import { QuemSomos } from '@components/quemSomos';
 
 export function Home() {
@@ -13,6 +14,7 @@ export function Home() {
         <Hero />
         <QuemSomos />
       </main>
+      <Footer />
       {/* Coloque o footer aqui */}
     </div>
   );
