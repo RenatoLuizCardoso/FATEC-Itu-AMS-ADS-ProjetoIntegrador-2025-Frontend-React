@@ -1,9 +1,22 @@
 import { Book, Contact, Home, LogIn, Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      const offset = window.scrollY;
+      setScrolled(offset > window.innerHeight * 0.8); // Quando passar da hero
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const navItems = [
     {
@@ -26,13 +39,10 @@ export function Navbar() {
 
   return (
     <nav
-      className={
-        'fixed w-screen  hero-section px-6 md:px-10 py-5 transition-all duration-300 z-50 bg-amber-900 mb-2'
-      }
+      className={`fixed w-screen px-6 md:px-10 py-5 transition-all duration-300 z-50 mb-2 ${scrolled || isOpen ? 'bg-amber-900 ' : 'bg-transparent'}  `}
     >
       <div className="container mx-auto flex justify-between px-4 tems-center text-amber-50">
-        {/* Links desktop à esquerda */}
-
+        {/* Menu mobile */}
         <div className="md:hidden flex items-center">
           <button
             type="button"
@@ -43,6 +53,8 @@ export function Navbar() {
           </button>
         </div>
 
+        {/* Links desktop à esquerda */}
+
         {/* Logo centralizado */}
         <div className=" flex items-center justify-center flex-grow ">
           <span className="text-2xl md:text-3xl font-playfair font-semibold">
@@ -50,24 +62,32 @@ export function Navbar() {
           </span>
         </div>
         {/* Links desktop à direita */}
-
-        {/* Menu mobile */}
       </div>
 
       {/* Menu dropdown mobile */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 bg-yellow-50 right-0 shadow-lg py-4 px-6 z-50 ">
-          {navItems.map((item) => (
-            <button
-              type="button"
-              key={item.name}
-              className="flex items-center py-3 space-x-3 text-black hover:text-amber-800"
-              onClick={() => setIsOpen(false)}
-            >
-              {item.icon}
-              <span>{item.name}</span>
-            </button>
-          ))}
+        <div
+          className="md:hidden absolute top-full left-0 right-0 bg-yellow-50 shadow-2xl rounded-b-xl border-t border-yellow-200 px-6 py-4 z-50"
+          style={{
+            animation: isOpen
+              ? 'fadeIn 0.3s ease-out forwards'
+              : 'fadeOut 0.3s ease-in forwards',
+          }}
+        >
+          <ul className="flex flex-col space-y-4">
+            {navItems.map((item) => (
+              <li key={item.name}>
+                <button
+                  type="button"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center w-full gap-4 text-black text-base font-medium font-playfair hover:text-yellow-50 hover:bg-amber-900 px-4 py-3 rounded-lg transition-all duration-200"
+                >
+                  {item.icon}
+                  <span>{item.name}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </nav>
