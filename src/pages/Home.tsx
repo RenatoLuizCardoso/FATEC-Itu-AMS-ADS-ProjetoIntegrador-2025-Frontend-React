@@ -1,3 +1,4 @@
+import { Contatos } from '@components/Contatos';
 import { Hero } from '@components/Hero';
 // import { HelloWorld } from '@components/helloWorld';
 import { Navbar } from '@components/Navbar';
@@ -12,6 +13,7 @@ export function Home() {
         {/* Aqui vai o sessão hero */}
         <Hero />
         <QuemSomos />
+        <Contatos />
       </main>
       {/* Coloque o footer aqui */}
     </div>
