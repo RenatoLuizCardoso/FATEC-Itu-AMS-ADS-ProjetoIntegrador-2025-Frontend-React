@@ -1,6 +1,19 @@
-import { HelloWorld } from '@components/helloWorld';
+import { Hero } from '@components/Hero';
+// import { HelloWorld } from '@components/helloWorld';
+import { Navbar } from '@components/Navbar';
 import { QuemSomos } from '@components/quemSomos';
 
 export function Home() {
-  return <QuemSomos />;
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+
+      <main>
+        {/* Aqui vai o sessão hero */}
+        <Hero />
+        <QuemSomos />
+      </main>
+      {/* Coloque o footer aqui */}
+    </div>
+  );
 }
