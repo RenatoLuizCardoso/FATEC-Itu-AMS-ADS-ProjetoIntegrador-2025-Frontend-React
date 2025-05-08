@@ -1,5 +1,4 @@
 import { Hero } from '@components/Hero';
-// import { HelloWorld } from '@components/helloWorld';
 import { Navbar } from '@components/Navbar';
 import { Footer } from '@components/footer';
 import { QuemSomos } from '@components/quemSomos';
