@@ -3,7 +3,7 @@ import chefe from '@assets/chefe.jpg';
 
 export function QuemSomos() {
   return (
-    <section className="w-screen py-16 text-amber-900 bg-yellow-50 overflow-x-hidden">
+    <section className="w-screen py-16 text-amber-900 bg-yellow-50">
       <div className="max-w-7xl mx-auto px-6 space-y-24">
         {/* Sessão Cultura & Pratos  */}
         <div className="px-4 md:px-12 flex justify-center">
