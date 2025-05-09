@@ -1,6 +1,6 @@
-import { SlideNavigation } from './slideNavigation';
+import { CarouselSlideNavigation } from './carouselSlideNavigation';
 
-export function Carrousel() {
+export function Carousel() {
   const slides = [
     {
       id: 'item1',
@@ -53,7 +53,7 @@ export function Carrousel() {
                 alt={slide.alt}
                 className="w-full object-cover"
               />
-              <SlideNavigation
+              <CarouselSlideNavigation
                 prevSlideId={slide.prev}
                 nextSlideId={slide.next}
               />
