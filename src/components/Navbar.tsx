@@ -8,7 +8,7 @@ export function Navbar() {
   useEffect(() => {
     function handleScroll() {
       const offset = window.scrollY;
-      setScrolled(offset > window.innerHeight * 0.8); // Quando passar da hero
+      setScrolled(offset > window.innerHeight * 0.6); // Quando passar da hero
     }
 
     window.addEventListener('scroll', handleScroll);
