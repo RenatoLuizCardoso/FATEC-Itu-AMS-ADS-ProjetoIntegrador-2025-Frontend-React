@@ -2,7 +2,7 @@
 import { Contatos } from '@components/Contatos';
 import { Hero } from '@components/Hero';
 import { Navbar } from '@components/Navbar';
-import { Carrousel } from '@components/carrousel';
+import { Carousel } from '@components/carousel';
 import { QuemSomos } from '@components/quemSomos';
 
 export function Home() {
@@ -10,13 +10,11 @@ export function Home() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main>
-        {/* Aqui vai o sessão hero */}
         <Hero />
         <QuemSomos />
-        <Carrousel />
+        <Carousel />
         <Contatos />
       </main>
-      {/* Coloque o footer aqui */}
     </div>
   );
 }
