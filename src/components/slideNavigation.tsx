@@ -22,14 +22,14 @@ export function SlideNavigation({
         onClick={() => scrollToSlide(prevSlideId)}
         className="btn btn-circle bg-white shadow hover:bg-amber-100"
       >
-        <ChevronLeft className="w-5 h-5 text-amber-900" />
+        <ChevronLeft size={28} className="text-amber-900" />
       </button>
       <button
         type="button"
         onClick={() => scrollToSlide(nextSlideId)}
         className="btn btn-circle bg-white shadow hover:bg-amber-100"
       >
-        <ChevronRight className="w-5 h-5 text-amber-900" />
+        <ChevronRight size={28} className="text-amber-900" />
       </button>
     </div>
   );
