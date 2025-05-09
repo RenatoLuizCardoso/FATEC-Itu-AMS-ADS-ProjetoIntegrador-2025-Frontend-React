@@ -31,6 +31,14 @@ export function Footer() {
             </li>
           </ul>
         </FooterSection>
+        <FooterSection title="Horários">
+          <ul>
+            <li>Terça a Quinta:18h às 23h</li>
+            <li>Sexta e Sábado: 12h às 15h e 18h às 00h</li>
+            <li>Domingo: 12h às 17h</li>
+            <li>Segunda: Fechado</li>
+          </ul>
+        </FooterSection>
         <div className="w-full border-b border-zinc-500 my-4" />
         <p className="text-xs text-zinc-500 flex flex-col items-center">
           ©2025 Todos os direitos reservados.
