@@ -1,4 +1,6 @@
+import { Mail, MapPin, Phone } from 'lucide-react';
 import { ButtonGroup } from './buttonGroup';
+import { ContactInfo } from './contactInfo';
 import { FooterSection } from './footerSection';
 
 export function Footer() {
@@ -37,6 +39,15 @@ export function Footer() {
             <li>Sexta e Sábado: 12h às 15h e 18h às 00h</li>
             <li>Domingo: 12h às 17h</li>
             <li>Segunda: Fechado</li>
+          </ul>
+        </FooterSection>
+        <FooterSection title="Contatos">
+          <ul>
+            <ContactInfo icon={MapPin}>
+              Rua das Oliveiras, 123, Vale Verde, SP
+            </ContactInfo>
+            <ContactInfo icon={Phone}>(11) 4567-8901</ContactInfo>
+            <ContactInfo icon={Mail}>contato@terraemesa.com.br</ContactInfo>
           </ul>
         </FooterSection>
         <div className="w-full border-b border-zinc-500 my-4" />
