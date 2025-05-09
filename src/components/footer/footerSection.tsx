@@ -1,14 +1,22 @@
-import type { PropsWithChildren } from 'react';
+import type { ElementType, PropsWithChildren } from 'react';
 
-interface FooterSectionProps extends PropsWithChildren {
+interface FooterSectionProps<T extends ElementType = 'div'>
+  extends PropsWithChildren {
   title: string;
+  as?: T;
 }
 
-export function FooterSection({ title, children }: FooterSectionProps) {
+export function FooterSection<T extends ElementType = 'div'>({
+  title,
+  children,
+  as,
+}: FooterSectionProps<T>) {
+  const Component = as || 'div';
+
   return (
     <div className="mt-3">
       <h3 className="text-zinc-200 text-2xl">{title}</h3>
-      <div className="text-zinc-400">{children}</div>
+      <Component className="text-zinc-400">{children}</Component>
     </div>
   );
 }
