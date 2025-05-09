@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@theme {
+  --color-wp-green: #36382e;
+  --color-wp-gray: #4a4c43;
+}
+
 html,
 body {
   overflow-x: hidden;
