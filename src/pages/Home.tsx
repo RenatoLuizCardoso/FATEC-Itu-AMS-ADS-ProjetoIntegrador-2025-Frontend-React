@@ -2,8 +2,8 @@
 import { Contatos } from '@components/Contatos';
 import { Hero } from '@components/Hero';
 import { Navbar } from '@components/Navbar';
-import { Footer } from '@components/footer';
 import { Carousel } from '@components/carousel';
+import { Footer } from '@components/footer';
 import { QuemSomos } from '@components/quemSomos';
 
 export function Home() {
