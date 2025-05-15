@@ -22,8 +22,8 @@ const contactDetails = {
 
 export function Footer() {
   return (
-    <footer className="bg-wp-green w-screen flex flex-col items-center p-5">
-      <div className="w-[80%] flex flex-col md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-6 mt-8">
+    <footer className="flex w-screen flex-col items-center bg-wp-green p-5">
+      <div className="mt-8 flex w-[80%] flex-col md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-6">
         <FooterSection title="Terra & Mesa">
           <p>{paragraph.info}</p>
           <FooterButtonGroup />
@@ -44,8 +44,8 @@ export function Footer() {
           <FooterInfo icon={Mail}>{contactDetails.email}</FooterInfo>
         </FooterSection>
       </div>
-      <div className="w-[80%] border-b border-zinc-500 my-4" />
-      <p className="text-xs text-zinc-500 flex flex-col items-center">
+      <div className="my-4 w-[80%] border-zinc-500 border-b" />
+      <p className="flex flex-col items-center text-xs text-zinc-500">
         ©2025 Todos os direitos reservados.
       </p>
     </footer>

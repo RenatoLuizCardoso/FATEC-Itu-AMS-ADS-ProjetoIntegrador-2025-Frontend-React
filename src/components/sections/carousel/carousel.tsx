@@ -39,14 +39,14 @@ export function Carousel() {
   };
 
   return (
-    <section className="w-screen flex py-8 text-amber-900 bg-amber-50">
+    <section className="flex w-screen bg-amber-50 py-8 text-amber-900">
       <div className="mx-auto px-12 md:px-12">
-        <div className="carousel h-50 max-w-6xl md:max-w-6xl md:h-135 rounded-2xl shadow-xl transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl overflow-hidden">
+        <div className="carousel h-50 max-w-6xl overflow-hidden rounded-2xl shadow-xl transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl md:h-135 md:max-w-6xl">
           {slides.map((slide) => (
             <div
               key={slide.id}
               id={slide.id}
-              className="carousel-item w-full relative scroll-mt-24"
+              className="carousel-item relative w-full scroll-mt-24"
             >
               <img
                 src={slide.img}
@@ -67,7 +67,7 @@ export function Carousel() {
               type="button"
               key={slide.id}
               onClick={() => scrollToSlide(slide.id)}
-              className="w-3 h-3 rounded-full bg-amber-900 hover:bg-amber-700 transition-colors duration-300 focus:outline-none"
+              className="h-3 w-3 rounded-full bg-amber-900 transition-colors duration-300 hover:bg-amber-700 focus:outline-none"
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}

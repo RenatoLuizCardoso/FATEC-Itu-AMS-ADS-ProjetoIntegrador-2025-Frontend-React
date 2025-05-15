@@ -62,11 +62,11 @@ export function Contacts() {
   ];
 
   return (
-    <section className="w-screen py-8 text-amber-900 bg-yellow-50">
-      <div className="mx-auto px-12 max-w-6xl space-y-24 md:px-12">
+    <section className="w-screen bg-yellow-50 py-8 text-amber-900">
+      <div className="mx-auto max-w-6xl space-y-24 px-12 md:px-12">
         <header className="mx-auto mb-8">
-          <h2 className="text-4xl md:text-5xl font-bold">Contatos</h2>
-          <hr className="border-2 rounded-xl w-25 mb-4 border-lime-800" />
+          <h2 className="font-bold text-4xl md:text-5xl">Contatos</h2>
+          <hr className="mb-4 w-25 rounded-xl border-2 border-lime-800" />
           <p className="text-lg md:text-xl">{paragraph.info}</p>
         </header>
 
@@ -75,17 +75,17 @@ export function Contacts() {
             <div key={label} className="flex gap-4">
               <Icon size={20} />
               <div className="space-y-1">
-                <h3 className="text-lg md:text-xl font-bold">{label}</h3>
-                <div className="text-base md:text-lg text-amber">{content}</div>
+                <h3 className="font-bold text-lg md:text-xl">{label}</h3>
+                <div className="text-amber text-base md:text-lg">{content}</div>
               </div>
             </div>
           ))}
           <div className="space-y-1">
-            <h3 className="text-lg md:text-xl font-bold">
+            <h3 className="font-bold text-lg md:text-xl">
               Horário de Funcionamento
             </h3>
             {operatingHours.map(({ label, time }) => (
-              <div key={label} className="text-base md:text-lg text-amber">
+              <div key={label} className="text-amber text-base md:text-lg">
                 {label} : {time}
               </div>
             ))}

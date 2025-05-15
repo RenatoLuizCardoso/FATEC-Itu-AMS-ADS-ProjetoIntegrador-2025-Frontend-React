@@ -15,7 +15,7 @@ export function FooterSection<T extends ElementType = 'div'>({
 
   return (
     <div className="mt-3">
-      <h3 className="text-zinc-200 text-xl">{title}</h3>
+      <h3 className="text-xl text-zinc-200">{title}</h3>
       <Component className="text-zinc-400">{children}</Component>
     </div>
   );
