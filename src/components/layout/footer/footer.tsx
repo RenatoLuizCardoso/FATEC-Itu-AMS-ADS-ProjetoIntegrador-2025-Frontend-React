@@ -1,7 +1,7 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
-import { FooterButtonGroup } from './footerButtonGroup';
-import { FooterInfo } from './footerInfo';
-import { FooterSection } from './footerSection';
+import { FooterButtonGroup } from './button-group';
+import { FooterInfo } from './info';
+import { FooterSection } from './section';
 
 export function Footer() {
   return (

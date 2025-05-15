@@ -1,5 +1,5 @@
 import { Facebook, Instagram, Twitter } from 'lucide-react';
-import { FooterLinkButton } from './footerLinkButton';
+import { FooterLinkButton } from './link-button';
 
 export function FooterButtonGroup() {
   return (

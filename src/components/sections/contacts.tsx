@@ -1,9 +1,9 @@
-import { Clock, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
+import { Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 
-export function Contatos() {
+export function Contacts() {
   const style = 'underline hover:text-amber-700 transition-colors';
 
-  const contatos = [
+  const contacts = [
     {
       icon: Mail,
       label: 'Email',
@@ -63,7 +63,7 @@ export function Contatos() {
         </header>
 
         <div className="mx-auto grid grid-cols-1 gap-8">
-          {contatos.map(({ icon: Icon, label, content }) => (
+          {contacts.map(({ icon: Icon, label, content }) => (
             <div key={label} className="flex gap-4">
               <Icon size={20} />
               <div className="space-y-1">

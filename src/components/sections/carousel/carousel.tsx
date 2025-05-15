@@ -1,4 +1,4 @@
-import { CarouselSlideNavigation } from './carouselSlideNavigation';
+import { CarouselSlideNavigation } from './slide-navigation';
 
 export function Carousel() {
   const slides = [

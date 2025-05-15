@@ -1,10 +1,10 @@
+import { Footer } from '@components/layout/footer';
+import { Navbar } from '@components/layout/navbar';
+import { Carousel } from '@components/sections/carousel';
 // import { HelloWorld } from '@components/hello-World';
-import { Contatos } from '@components/Contatos';
-import { Hero } from '@components/Hero';
-import { Navbar } from '@components/Navbar';
-import { Carousel } from '@components/carousel';
-import { Footer } from '@components/footer';
-import { QuemSomos } from '@components/quemSomos';
+import { Contacts } from '@components/sections/contacts';
+import { Hero } from '@components/sections/hero';
+import { QuemSomos } from '@components/sections/quem-somos';
 
 export function Home() {
   return (
@@ -14,7 +14,7 @@ export function Home() {
         <Hero />
         <QuemSomos />
         <Carousel />
-        <Contatos />
+        <Contacts />
       </main>
       <Footer />
     </div>
