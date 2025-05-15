@@ -1,4 +1,7 @@
 export function Hero() {
+  const title = 'Nome & Restaurante';
+  const button = [{ info: 'Reserva' }, { info: 'Cardápio' }];
+
   return (
     <section className="w-screen py-16 relative min-h-[80vh] flex items-center bg-cover bg-center">
       {/* Sobrepocição na imagem */}
@@ -19,25 +22,22 @@ export function Hero() {
       {/* Conteúdo da sessão hero */}
       <div className="relative z-20 text-center px-10 max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold text-white mb-8 drop-shadow-lg">
-          Nome & Restaurante
+          {title}
         </h1>
         {/* <p className="text-xl md:text-2xl text-white/90 mb-8 drop-shadow-md max-w-2xl mx-auto">
           Uma frase agradável aos olhos do cliente
         </p> */}
+        {}
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <button
-            type="button"
-            className="text-white  bg-amber-900 hover:bg-amber-900/80 focus:outline-none focus:ring-4 focus:ring-amber-bg-amber-900/50 font-medium rounded-full text-lg px-8 py-3 transition-all duration-300 ease-in-out transform hover:scale-105 mb-4"
-          >
-            Faça sua Reserva
-          </button>
-
-          <button
-            type="button"
-            className="text-white bg-amber-900 hover:bg-amber-900/80 focus:outline-none focus:ring-4 focus:ring-restaurant-brown/50 font-medium rounded-full text-lg px-8 py-3 transition-all duration-300 ease-in-out transform hover:scale-105 mb-4"
-          >
-            Cardápio
-          </button>
+          {button.map((btn) => (
+            <button
+              key={btn.info}
+              type="button"
+              className="text-white  bg-amber-900 hover:bg-amber-900/80 focus:outline-none focus:ring-4 focus:ring-amber-bg-amber-900/50 font-medium rounded-full text-lg px-8 py-3 transition-all duration-300 ease-in-out transform hover:scale-105 mb-4"
+            >
+              {btn.info}
+            </button>
+          ))}
         </div>
       </div>
     </section>

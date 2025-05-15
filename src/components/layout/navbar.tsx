@@ -18,6 +18,10 @@ export function Navbar() {
     };
   }, []);
 
+  const logo = {
+    texto: 'logoDaEmpresa',
+  };
+
   const navItems = [
     {
       name: 'Home',
@@ -56,9 +60,9 @@ export function Navbar() {
         {/* Links desktop à esquerda */}
 
         {/* Logo centralizado */}
-        <div className=" flex items-center justify-center flex-grow ">
+        <div className=" flex items-center justify-center flex-grow">
           <span className="text-2xl md:text-3xl font-playfair font-semibold">
-            NomeRestaurante
+            {logo.texto}
           </span>
         </div>
         {/* Links desktop à direita */}

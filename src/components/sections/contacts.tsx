@@ -3,6 +3,10 @@ import { Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 export function Contacts() {
   const style = 'underline hover:text-amber-700 transition-colors';
 
+  const paragraph = {
+    info: 'Deseja fazer uma reserva ou tem alguma dúvida? Entre em contato conosco. Nossa equipe terá o prazer em atendê- lo.',
+  };
+
   const contacts = [
     {
       icon: Mail,
@@ -50,16 +54,20 @@ export function Contacts() {
     },
   ];
 
+  const operatingHours = [
+    { label: 'Terça a Quinta', time: '18h às 23h' },
+    { label: 'Sexta e Sábado', time: '12h às 15h e 18h às 00h' },
+    { label: 'Domingo', time: '12h às 17h' },
+    { label: 'Segunda', time: 'Fechado' },
+  ];
+
   return (
     <section className="w-screen py-8 text-amber-900 bg-yellow-50">
       <div className="mx-auto px-12 max-w-6xl space-y-24 md:px-12">
         <header className="mx-auto mb-8">
           <h2 className="text-4xl md:text-5xl font-bold">Contatos</h2>
           <hr className="border-2 rounded-xl w-25 mb-4 border-lime-800" />
-          <p className="text-lg md:text-xl">
-            Deseja fazer uma reserva ou tem alguma dúvida? Entre em contato
-            conosco. Nossa equipe terá o prazer em atendê-lo.
-          </p>
+          <p className="text-lg md:text-xl">{paragraph.info}</p>
         </header>
 
         <div className="mx-auto grid grid-cols-1 gap-8">
@@ -76,12 +84,11 @@ export function Contacts() {
             <h3 className="text-lg md:text-xl font-bold">
               Horário de Funcionamento
             </h3>
-            <div className="text-base md:text-lg text-amber">
-              Terça a Quinta: 18h às 23h <br />
-              Sexta e Sábado: 12h às 15h e 18h às 00h <br />
-              Domingo: 12h às 17h <br />
-              Segunda: Fechado
-            </div>
+            {operatingHours.map(({ label, time }) => (
+              <div key={label} className="text-base md:text-lg text-amber">
+                {label} : {time}
+              </div>
+            ))}
           </div>
         </div>
       </div>

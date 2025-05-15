@@ -3,29 +3,45 @@ import { FooterButtonGroup } from './button-group';
 import { FooterInfo } from './info';
 import { FooterSection } from './section';
 
+const paragraph = {
+  info: 'Uma experiência gastronômica que celebra os sabores regionais com um toque contemporâneo.',
+};
+
+const operatingHours = [
+  { label: 'Terça a Quinta', time: '18h às 23h' },
+  { label: 'Sexta e Sábado', time: '12h às 15h e 18h às 00h' },
+  { label: 'Domingo', time: '12h às 17h' },
+  { label: 'Segunda', time: 'Fechado' },
+];
+
+const contactDetails = {
+  address: 'Rua das Oliveiras, 123, Vale Verde, SP',
+  phone: '(11) 4567-8901',
+  email: 'contato@empresa.com.br',
+};
+
 export function Footer() {
   return (
     <footer className="bg-wp-green w-screen flex flex-col items-center p-5">
       <div className="w-[80%] flex flex-col md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-6 mt-8">
         <FooterSection title="Terra & Mesa">
-          <p>
-            Uma experiência gastronômica que celebra os sabores regionais com um
-            toque contemporâneo.
-          </p>
+          <p>{paragraph.info}</p>
           <FooterButtonGroup />
         </FooterSection>
+
         <FooterSection as="ul" title="Horários">
-          <FooterInfo>Terça a Quinta:18h às 23h</FooterInfo>
-          <FooterInfo>Sexta e Sábado: 12h às 15h e 18h às 00h</FooterInfo>
-          <FooterInfo>Domingo: 12h às 17h</FooterInfo>
-          <FooterInfo>Segunda: Fechado</FooterInfo>
+          {operatingHours.map(({ label, time }) => (
+            <FooterInfo key={label}>
+              {' '}
+              {label} : {time}
+            </FooterInfo>
+          ))}
         </FooterSection>
+
         <FooterSection as="ul" title="Contatos">
-          <FooterInfo icon={MapPin}>
-            Rua das Oliveiras, 123, Vale Verde, SP
-          </FooterInfo>
-          <FooterInfo icon={Phone}>(11) 4567-8901</FooterInfo>
-          <FooterInfo icon={Mail}>contato@terraemesa.com.br</FooterInfo>
+          <FooterInfo icon={MapPin}>{contactDetails.address}</FooterInfo>
+          <FooterInfo icon={Phone}>{contactDetails.phone}</FooterInfo>
+          <FooterInfo icon={Mail}>{contactDetails.email}</FooterInfo>
         </FooterSection>
       </div>
       <div className="w-[80%] border-b border-zinc-500 my-4" />
