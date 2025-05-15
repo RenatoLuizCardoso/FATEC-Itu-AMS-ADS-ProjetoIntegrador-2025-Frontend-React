@@ -1,8 +1,8 @@
-import { Home } from '@pages/home';
+import { Home } from '@pages/Home';
 
 export function App() {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex items-center justify-center">
       <Home />
     </div>
   );

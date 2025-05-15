@@ -39,11 +39,11 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed w-screen px-6 md:px-10 py-5 transition-all duration-300 z-50 mb-2 ${scrolled || isOpen ? 'bg-amber-900 ' : 'bg-transparent'}  `}
+      className={`fixed z-50 mb-2 w-screen px-6 py-5 transition-all duration-300 md:px-10 ${scrolled || isOpen ? 'bg-amber-900 ' : 'bg-transparent'}  `}
     >
-      <div className="container mx-auto flex justify-between px-4 tems-center text-amber-50">
+      <div className="tems-center container mx-auto flex justify-between px-4 text-amber-50">
         {/* Menu mobile */}
-        <div className="md:hidden flex items-center">
+        <div className="flex items-center md:hidden">
           <button
             type="button"
             onClick={() => setIsOpen(!isOpen)}
@@ -56,8 +56,8 @@ export function Navbar() {
         {/* Links desktop à esquerda */}
 
         {/* Logo centralizado */}
-        <div className=" flex items-center justify-center flex-grow ">
-          <span className="text-2xl md:text-3xl font-playfair font-semibold">
+        <div className=" flex flex-grow items-center justify-center ">
+          <span className="font-playfair font-semibold text-2xl md:text-3xl">
             NomeRestaurante
           </span>
         </div>
@@ -67,7 +67,7 @@ export function Navbar() {
       {/* Menu dropdown mobile */}
       {isOpen && (
         <div
-          className="md:hidden absolute top-full left-0 right-0 bg-yellow-50 shadow-2xl rounded-b-xl border-t border-yellow-200 px-6 py-4 z-50"
+          className="absolute top-full right-0 left-0 z-50 rounded-b-xl border-yellow-200 border-t bg-yellow-50 px-6 py-4 shadow-2xl md:hidden"
           style={{
             animation: isOpen
               ? 'fadeIn 0.3s ease-out forwards'
@@ -80,7 +80,7 @@ export function Navbar() {
                 <button
                   type="button"
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center w-full gap-4 text-black text-base font-medium font-playfair hover:text-yellow-50 hover:bg-amber-900 px-4 py-3 rounded-lg transition-all duration-200"
+                  className="flex w-full items-center gap-4 rounded-lg px-4 py-3 font-medium font-playfair text-base text-black transition-all duration-200 hover:bg-amber-900 hover:text-yellow-50"
                 >
                   {item.icon}
                   <span>{item.name}</span>

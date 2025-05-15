@@ -1,8 +1,8 @@
 export function Hero() {
   return (
-    <section className="w-screen py-16 relative min-h-[80vh] flex items-center bg-cover bg-center">
+    <section className="relative flex min-h-[80vh] w-screen items-center bg-center bg-cover py-16">
       {/* Sobrepocição na imagem */}
-      <div className="absolute inset-0 bg-black/40 z-10">{''}</div>
+      <div className="absolute inset-0 z-10 bg-black/40">{''}</div>
 
       {/* Imagem de fundo */}
       <div
@@ -17,24 +17,24 @@ export function Hero() {
       </div>
 
       {/* Conteúdo da sessão hero */}
-      <div className="relative z-20 text-center px-10 max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold text-white mb-8 drop-shadow-lg">
+      <div className="relative z-20 mx-auto max-w-4xl px-10 text-center">
+        <h1 className="mb-8 font-bold font-playfair text-4xl text-white drop-shadow-lg md:text-6xl lg:text-7xl">
           Nome & Restaurante
         </h1>
         {/* <p className="text-xl md:text-2xl text-white/90 mb-8 drop-shadow-md max-w-2xl mx-auto">
           Uma frase agradável aos olhos do cliente
         </p> */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
+        <div className="flex flex-col justify-center gap-4 sm:flex-row">
           <button
             type="button"
-            className="text-white  bg-amber-900 hover:bg-amber-900/80 focus:outline-none focus:ring-4 focus:ring-amber-bg-amber-900/50 font-medium rounded-full text-lg px-8 py-3 transition-all duration-300 ease-in-out transform hover:scale-105 mb-4"
+            className="mb-4 transform rounded-full bg-amber-900 px-8 py-3 font-medium text-lg text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-amber-900/80 focus:outline-none focus:ring-4 focus:ring-amber-bg-amber-900/50"
           >
             Faça sua Reserva
           </button>
 
           <button
             type="button"
-            className="text-white bg-amber-900 hover:bg-amber-900/80 focus:outline-none focus:ring-4 focus:ring-restaurant-brown/50 font-medium rounded-full text-lg px-8 py-3 transition-all duration-300 ease-in-out transform hover:scale-105 mb-4"
+            className="mb-4 transform rounded-full bg-amber-900 px-8 py-3 font-medium text-lg text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-amber-900/80 focus:outline-none focus:ring-4 focus:ring-restaurant-brown/50"
           >
             Cardápio
           </button>

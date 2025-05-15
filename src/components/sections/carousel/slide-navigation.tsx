@@ -16,7 +16,7 @@ export function CarouselSlideNavigation({
   };
 
   return (
-    <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+    <div className="-translate-y-1/2 absolute top-1/2 right-5 left-5 flex transform justify-between">
       <button
         type="button"
         onClick={() => scrollToSlide(prevSlideId)}

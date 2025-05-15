@@ -1,6 +1,6 @@
 export function HelloWorld() {
   return (
-    <h1 className="text-3xl font-bold text-pink-50 bg-pink-400 rounded-2xl p-2">
+    <h1 className="rounded-2xl bg-pink-400 p-2 font-bold text-3xl text-pink-50">
       Hello world!
     </h1>
   );

@@ -3,7 +3,7 @@ import { FooterLinkButton } from './link-button';
 
 export function FooterButtonGroup() {
   return (
-    <div className="flex gap-2 my-7">
+    <div className="my-7 flex gap-2">
       <FooterLinkButton icon={Twitter} />
       <FooterLinkButton icon={Facebook} />
       <FooterLinkButton icon={Instagram} />
