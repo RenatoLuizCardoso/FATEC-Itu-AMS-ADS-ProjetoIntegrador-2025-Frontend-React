@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "biome check --fix",
+    "lint:ci": "biome ci",
+    "typecheck": "tsc -b",
     "lint-staged": "lint-staged",
     "commitlint": "commitlint --edit",
     "preview": "vite preview",
