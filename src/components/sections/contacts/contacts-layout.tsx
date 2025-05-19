@@ -25,7 +25,7 @@ const iconMap = {
   phone: Phone,
 };
 
-export function Layout({
+export function ContactsLayout({
   paragraphInfo,
   contacts,
   operatingHours,

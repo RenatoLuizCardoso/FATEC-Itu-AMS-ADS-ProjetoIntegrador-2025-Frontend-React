@@ -1,4 +1,4 @@
-import { HeroLayout } from './heroLayout';
+import { HeroLayout } from './hero-layout';
 
 const mockData = {
   title: 'Nome & Restaurante',

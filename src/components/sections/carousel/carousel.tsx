@@ -1,4 +1,4 @@
-import { Layout } from './layout';
+import { CarouselLayout } from './carousel-layout';
 
 const mockData = {
   slides: [
@@ -26,5 +26,5 @@ const mockData = {
 };
 
 export function Carousel() {
-  return <Layout {...mockData} />;
+  return <CarouselLayout {...mockData} />;
 }

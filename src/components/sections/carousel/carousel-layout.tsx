@@ -11,7 +11,7 @@ type CarouselProps = {
   slides: Slide[];
 };
 
-export function Layout({ slides }: CarouselProps) {
+export function CarouselLayout({ slides }: CarouselProps) {
   const [activeSlide, setActiveSlide] = useState(slides[0].id);
 
   const scrollToSlide = (id: string) => {

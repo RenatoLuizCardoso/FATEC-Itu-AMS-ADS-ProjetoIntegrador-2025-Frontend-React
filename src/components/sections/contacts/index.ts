@@ -1,2 +1,2 @@
-export * from './layout';
+export * from './contacts-layout';
 export * from './contacts';

@@ -1,4 +1,4 @@
-import { Layout } from './layout';
+import { ContactsLayout } from './contacts-layout';
 
 const mockData = {
   paragraphInfo:
@@ -38,5 +38,5 @@ const mockData = {
 };
 
 export function Contacts() {
-  return <Layout {...mockData} />;
+  return <ContactsLayout {...mockData} />;
 }
