@@ -44,7 +44,7 @@ export function NavbarLayout({ logoText, items }: NavbarLayoutProps) {
     >
       <div className="tems-center container mx-auto flex justify-between px-4 text-amber-50">
         {/* Menu mobile */}
-        <div className="flex items-center md:hidden">
+        <div className="flex items-center lg:hidden ">
           <button
             type="button"
             onClick={() => setIsOpen(!isOpen)}
@@ -55,7 +55,7 @@ export function NavbarLayout({ logoText, items }: NavbarLayoutProps) {
         </div>
 
         {/* Links desktop à esquerda */}
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-8 lg:flex">
           {items.slice(0, -1).map(({ type, label, href }) => {
             const Icon = iconMap[type];
             return (
@@ -101,7 +101,7 @@ export function NavbarLayout({ logoText, items }: NavbarLayoutProps) {
       {/* Menu dropdown mobile */}
       {isOpen && (
         <div
-          className="absolute top-full right-0 left-0 z-50 rounded-b-xl border-yellow-200 border-t bg-yellow-50 px-6 py-4 shadow-2xl md:hidden"
+          className="absolute top-full right-0 left-0 z-50 rounded-b-xl border-yellow-200 border-t bg-yellow-50 px-6 py-4 shadow-2xl lg:hidden"
           style={{
             animation: isOpen
               ? 'fadeIn 0.3s ease-out forwards'
