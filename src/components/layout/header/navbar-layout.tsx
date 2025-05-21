@@ -56,7 +56,7 @@ export function NavbarLayout({ logoText, items }: NavbarLayoutProps) {
 
         {/* Links desktop à esquerda */}
         <div className="hidden items-center gap-8 lg:flex">
-          {items.slice(0, -1).map(({ type, label, href }) => {
+          {items.slice(0, -2).map(({ type, label, href }) => {
             const Icon = iconMap[type];
             return (
               <a
@@ -79,16 +79,21 @@ export function NavbarLayout({ logoText, items }: NavbarLayoutProps) {
         </div>
 
         {/* Links desktop à direita */}
-        <div className="hidden items-center md:flex">
+        <div className="hidden items-center gap-4 md:flex">
           {items
-            .filter((item) => item.type === 'login')
+            .filter((item) => item.type === 'contact' || item.type === 'login')
             .map(({ label, href, type }) => {
               const Icon = iconMap[type];
+              const isLogin = type === 'login';
               return (
                 <a
                   key={label}
                   href={href}
-                  className="flex items-center gap-2 rounded-md bg-yellow-50 px-4 py-2 font-semibold text-amber-900 transition-colors hover:bg-yellow-100"
+                  className={`flex items-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors ${
+                    isLogin
+                      ? 'bg-yellow-50 text-amber-900 hover:bg-yellow-100'
+                      : 'hidden text-amber-50 hover:text-yellow-300 lg:flex'
+                  }`}
                 >
                   {Icon && <Icon size={18} />}
                   {label}
@@ -111,13 +116,14 @@ export function NavbarLayout({ logoText, items }: NavbarLayoutProps) {
           <ul className="flex flex-col space-y-4">
             {items.map(({ type, label, href }) => {
               const Icon = iconMap[type];
+              const isLogin = type === 'login';
               return (
                 <li key={label}>
                   <a
                     href={href}
                     type="button"
                     onClick={() => setIsOpen(false)}
-                    className="flex w-full items-center gap-4 rounded-lg px-4 py-3 font-medium font-playfair text-base text-black transition-all duration-200 hover:bg-amber-900 hover:text-yellow-50"
+                    className={`flex w-full items-center gap-4 rounded-lg px-4 py-3 font-medium font-playfair text-base text-black transition-all duration-200 hover:bg-amber-900 ${isLogin ? 'hover:text-yellow-50 md:hidden' : 'hover:text-yellow-50'}`}
                   >
                     {Icon && <Icon size={18} />}
                     <span>{label}</span>
