@@ -36,7 +36,7 @@ export function HeroLayout({ title, buttons, img }: HeroProps) {
             <button
               key={info}
               type="button"
-              className="mb-4 transform rounded-full bg-amber-900 px-8 py-3 font-medium text-lg text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-amber-900/80 focus:outline-none focus:ring-4 focus:ring-amber-bg-amber-900/50"
+              className="transform cursor-pointer rounded-full bg-amber-900 px-8 py-3 font-medium text-lg text-white transition-all duration-300 ease-in-out hover:scale-105 hover:bg-amber-900/80 focus:outline-none focus:ring-4 focus:ring-amber-bg-amber-900/50 sm:w-40"
             >
               {info}
             </button>

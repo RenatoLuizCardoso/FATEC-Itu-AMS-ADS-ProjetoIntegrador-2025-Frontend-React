@@ -46,7 +46,7 @@ export function ContactsLayout({
             const Icon = iconMap[type];
 
             return (
-              <div key={label} className="flex gap-4">
+              <div key={label} className="flex items-center gap-4">
                 <Icon size={20} />
                 <div className="space-y-1">
                   <h3 className="font-bold text-lg md:text-xl">{label}</h3>

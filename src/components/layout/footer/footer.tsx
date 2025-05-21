@@ -23,7 +23,7 @@ const contactDetails = {
 export function Footer() {
   return (
     <footer className="flex w-screen flex-col items-center bg-wp-green p-5">
-      <div className="mt-8 flex w-[80%] flex-col md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-6">
+      <div className="mt-8 flex w-[77%] flex-col gap-6 md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-6">
         <FooterSection title="Terra & Mesa">
           <p>{paragraph.info}</p>
           <FooterButtonGroup />
@@ -33,12 +33,12 @@ export function Footer() {
           {operatingHours.map(({ label, time }) => (
             <FooterInfo key={label}>
               {' '}
-              {label} : {time}
+              {label}: {time}
             </FooterInfo>
           ))}
         </FooterSection>
 
-        <FooterSection as="ul" title="Contatos">
+        <FooterSection as="ul" title="Contatos" className="md:mb-3">
           <FooterInfo icon={MapPin}>{contactDetails.address}</FooterInfo>
           <FooterInfo icon={Phone}>{contactDetails.phone}</FooterInfo>
           <FooterInfo icon={Mail}>{contactDetails.email}</FooterInfo>

@@ -7,7 +7,7 @@ interface FooterInfoProps extends PropsWithChildren {
 
 export function FooterInfo({ children, icon: Icon }: FooterInfoProps) {
   return (
-    <li className="flex flex-row">
+    <li className="flex flex-row items-center gap-1">
       {Icon && <Icon size={20} />}
       {children}
     </li>

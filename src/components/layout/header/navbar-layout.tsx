@@ -73,7 +73,7 @@ export function NavbarLayout({ logoText, items }: NavbarLayoutProps) {
 
         {/* Logo centralizado */}
         <div className="-translate-x-1/2 absolute left-1/2 transform">
-          <span className="font-playfair font-semibold text-2xl md:text-3xl">
+          <span className="cursor-pointer font-playfair font-semibold text-2xl md:text-3xl">
             {logoText}
           </span>
         </div>
