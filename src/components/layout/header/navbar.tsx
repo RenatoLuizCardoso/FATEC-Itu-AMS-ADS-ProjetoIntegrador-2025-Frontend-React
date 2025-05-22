@@ -21,7 +21,7 @@ const mockData = {
     {
       type: 'login' as const,
       label: 'Login',
-      href: '#login',
+      href: 'login',
     },
   ],
 };

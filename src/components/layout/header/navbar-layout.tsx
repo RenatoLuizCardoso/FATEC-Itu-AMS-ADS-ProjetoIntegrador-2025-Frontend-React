@@ -1,5 +1,6 @@
 import { Book, Contact, Home, LogIn, Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { Link, NavLink } from 'react-router';
 
 type NavbarItemType = 'home' | 'about' | 'contact' | 'login';
 
@@ -73,9 +74,12 @@ export function NavbarLayout({ logoText, items }: NavbarLayoutProps) {
 
         {/* Logo centralizado */}
         <div className="-translate-x-1/2 absolute left-1/2 transform">
-          <span className="cursor-pointer font-playfair font-semibold text-2xl md:text-3xl">
+          <NavLink
+            to="/"
+            className="cursor-pointer font-playfair font-semibold text-2xl md:text-3xl"
+          >
             {logoText}
-          </span>
+          </NavLink>
         </div>
 
         {/* Links desktop à direita */}
@@ -85,16 +89,18 @@ export function NavbarLayout({ logoText, items }: NavbarLayoutProps) {
             .map(({ label, href, type }) => {
               const Icon = iconMap[type];
               const isLogin = type === 'login';
-              return (
-                <a
-                  key={label}
-                  href={href}
-                  className={`flex items-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors ${
-                    isLogin
-                      ? 'bg-yellow-50 text-amber-900 hover:bg-yellow-100'
-                      : 'hidden text-amber-50 hover:text-yellow-300 lg:flex'
-                  }`}
-                >
+              const className = `flex items-center gap-2 rounded-md px-4 py-2 font-semibold transition-colors ${
+                isLogin
+                  ? 'bg-yellow-50 text-amber-900 hover:bg-yellow-100'
+                  : 'text-amber-50 hover:text-yellow-300 lg:flex'
+              }`;
+              return isLogin ? (
+                <Link to={href} key={label} className={className}>
+                  {Icon && <Icon size={18} />}
+                  {label}
+                </Link>
+              ) : (
+                <a key={label} href={href} className={className}>
                   {Icon && <Icon size={18} />}
                   {label}
                 </a>

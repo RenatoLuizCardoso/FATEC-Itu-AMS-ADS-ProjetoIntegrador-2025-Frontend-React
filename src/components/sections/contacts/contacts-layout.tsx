@@ -33,7 +33,10 @@ export function ContactsLayout({
   const style = 'underline hover:text-amber-700 transition-colors';
 
   return (
-    <section className="w-screen bg-yellow-50 py-8 text-amber-900">
+    <section
+      id="contact"
+      className="w-screen scroll-mt-[5rem] bg-yellow-50 py-8 text-amber-900"
+    >
       <div className="mx-auto max-w-6xl space-y-24 px-10 md:px-20">
         <header className="mx-auto mb-8">
           <h2 className="font-bold text-4xl md:text-5xl">Contatos</h2>

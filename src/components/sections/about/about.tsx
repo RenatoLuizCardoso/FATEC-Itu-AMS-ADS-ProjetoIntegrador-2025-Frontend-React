@@ -26,7 +26,10 @@ const data = {
 
 export function About() {
   return (
-    <section className="w-screen bg-yellow-50 py-16 text-amber-900 md:py-10">
+    <section
+      id="about"
+      className="w-screen scroll-mt-[5rem] bg-yellow-50 py-16 text-amber-900 md:py-10"
+    >
       <div className="mx-auto max-w-7xl space-y-24 px-10 md:px-20">
         <AboutSection title={data.aboutSections[0].title}>
           {data.aboutSections[0].content}
