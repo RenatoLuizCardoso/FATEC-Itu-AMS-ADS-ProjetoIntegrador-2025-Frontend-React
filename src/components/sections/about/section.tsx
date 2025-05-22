@@ -13,7 +13,7 @@ export function AboutSection({
   alt,
   className,
 }: AboutSectionProps) {
-  const classNameGeneric = `flex w-auto flex-col items-center gap-10 px-4 md:px-12 ${className}`;
+  const classNameGeneric = `flex w-auto flex-col items-center gap-10 ${className}`;
 
   return (
     <div className={classNameGeneric}>

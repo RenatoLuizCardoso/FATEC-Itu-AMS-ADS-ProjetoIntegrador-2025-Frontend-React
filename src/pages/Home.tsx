@@ -1,8 +1,8 @@
 import { Footer } from '@components/layout/footer';
-import { Navbar } from '@components/layout/navbar';
+// import { HelloWorld } from '@components/hello-World';
+import { Navbar } from '@components/layout/header';
 import { About } from '@components/sections/about';
 import { Carousel } from '@components/sections/carousel';
-// import { HelloWorld } from '@components/hello-World';
 import { Contacts } from '@components/sections/contacts';
 import { Hero } from '@components/sections/hero';
 
