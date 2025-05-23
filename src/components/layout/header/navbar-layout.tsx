@@ -1,23 +1,23 @@
 import {
-  Book,
-  CalendarCheck,
-  Contact,
-  Home,
-  LogIn,
-  Menu,
-  ScrollText,
-  X,
-} from 'lucide-react';
+  AddressBookIcon,
+  BookIcon,
+  CalendarCheckIcon,
+  HouseIcon,
+  ListIcon,
+  ScrollIcon,
+  SignInIcon,
+  XIcon,
+} from '@phosphor-icons/react';
 import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router';
 
 const iconMap = {
-  home: Home,
-  about: Book,
-  contact: Contact,
-  menu: ScrollText,
-  booking: CalendarCheck,
-  login: LogIn,
+  home: HouseIcon,
+  about: BookIcon,
+  contact: AddressBookIcon,
+  menu: ScrollIcon,
+  booking: CalendarCheckIcon,
+  login: SignInIcon,
 };
 
 type NavbarItemType = keyof typeof iconMap;
@@ -68,7 +68,7 @@ export function NavbarLayout({
             onClick={() => setIsOpen(!isOpen)}
             className="text-amber-50"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <XIcon size={24} /> : <ListIcon size={24} />}
           </button>
         </div>
 
@@ -84,7 +84,7 @@ export function NavbarLayout({
                   href={href}
                   className="flex items-center gap-2 font-medium text-base transition-colors hover:text-yellow-300"
                 >
-                  {Icon && <Icon size={18} />}
+                  {Icon && <Icon size={24} />}
                   {label}
                 </a>
               );
@@ -115,12 +115,12 @@ export function NavbarLayout({
               }`;
               return isLogin ? (
                 <Link to={href} key={type} className={className}>
-                  {Icon && <Icon size={18} />}
+                  {Icon && <Icon size={24} />}
                   {label}
                 </Link>
               ) : (
                 <a key={label} href={href} className={className}>
-                  {Icon && <Icon size={18} />}
+                  {Icon && <Icon size={24} />}
                   {label}
                 </a>
               );

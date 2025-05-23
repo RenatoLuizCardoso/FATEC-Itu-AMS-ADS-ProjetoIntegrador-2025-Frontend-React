@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { CaretLeftIcon, CaretRightIcon } from '@phosphor-icons/react';
 
 type SlideNavigationProps = {
   prevSlideId: string;
@@ -22,7 +22,7 @@ export function CarouselSlideNavigation({
         className={commonBtnClass}
         aria-label="Previous slide"
       >
-        <ChevronLeft size={28} className="text-amber-900" />
+        <CaretLeftIcon size={24} className="text-amber-900" />
       </button>
       <button
         type="button"
@@ -30,7 +30,7 @@ export function CarouselSlideNavigation({
         className={commonBtnClass}
         aria-label="Next slide"
       >
-        <ChevronRight size={28} className="text-amber-900" />
+        <CaretRightIcon size={24} className="text-amber-900" />
       </button>
     </div>
   );

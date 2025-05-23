@@ -1,4 +1,8 @@
-import { Mail, MapPin, Phone } from 'lucide-react';
+import {
+  EnvelopeSimpleOpenIcon,
+  MapPinIcon,
+  PhoneIcon,
+} from '@phosphor-icons/react';
 import { FooterButtonGroup } from './button-group';
 import { FooterInfo } from './info';
 import { FooterSection } from './section';
@@ -34,7 +38,7 @@ export function FooterLayout({
   contactDetails,
 }: FooterProps) {
   return (
-    <footer className="flex w-full flex-col items-center bg-wp-green p-5">
+    <footer className="flex w-full flex-col items-center bg-wp-green p-5 text-xs">
       <div className="mt-8 flex w-[77%] max-w-6xl flex-col gap-6 md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-6">
         <FooterSection title={info.title.brand}>
           <p>{info.paragraph}</p>
@@ -51,9 +55,11 @@ export function FooterLayout({
         </FooterSection>
 
         <FooterSection as="ul" title={info.title.contact} className="md:mb-3">
-          <FooterInfo icon={MapPin}>{contactDetails.address}</FooterInfo>
-          <FooterInfo icon={Phone}>{contactDetails.phone}</FooterInfo>
-          <FooterInfo icon={Mail}>{contactDetails.email}</FooterInfo>
+          <FooterInfo icon={MapPinIcon}>{contactDetails.address}</FooterInfo>
+          <FooterInfo icon={PhoneIcon}>{contactDetails.phone}</FooterInfo>
+          <FooterInfo icon={EnvelopeSimpleOpenIcon}>
+            {contactDetails.email}
+          </FooterInfo>
         </FooterSection>
       </div>
       <div className="my-4 w-[80%] border-zinc-500 border-b" />

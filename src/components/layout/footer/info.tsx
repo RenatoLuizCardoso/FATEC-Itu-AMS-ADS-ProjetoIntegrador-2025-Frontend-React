@@ -1,8 +1,8 @@
-import type { LucideIcon } from 'lucide-react';
+import type { IconProps } from '@phosphor-icons/react';
 import type { PropsWithChildren } from 'react';
 
 interface FooterInfoProps extends PropsWithChildren {
-  icon?: LucideIcon;
+  icon?: React.ComponentType<IconProps>;
 }
 
 export function FooterInfo({ children, icon: Icon }: FooterInfoProps) {
