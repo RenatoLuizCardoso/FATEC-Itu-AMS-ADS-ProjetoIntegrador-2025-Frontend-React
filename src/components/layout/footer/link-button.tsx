@@ -1,9 +1,9 @@
-import type { LucideIcon } from 'lucide-react';
+import type { IconProps } from '@phosphor-icons/react';
 import type { ButtonHTMLAttributes } from 'react';
 
 interface FooterLinkButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement> {
-  icon: LucideIcon;
+  icon: React.ComponentType<IconProps>;
 }
 
 export function FooterLinkButton({
@@ -16,7 +16,7 @@ export function FooterLinkButton({
       type="button"
       {...props}
     >
-      <Icon size={16} className="text-zinc-200" />
+      <Icon size={20} className="text-zinc-200" />
     </button>
   );
 }
