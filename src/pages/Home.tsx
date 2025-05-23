@@ -1,20 +1,20 @@
+import { Footer } from '@components/layout/footer';
 // import { HelloWorld } from '@components/hello-World';
-import { Contatos } from '@components/Contatos';
-import { Hero } from '@components/Hero';
-import { Navbar } from '@components/Navbar';
-import { Footer } from '@components/footer';
-import { Carousel } from '@components/carousel';
-import { QuemSomos } from '@components/quemSomos';
+import { Navbar } from '@components/layout/header';
+import { About } from '@components/sections/about';
+import { Carousel } from '@components/sections/carousel';
+import { Contacts } from '@components/sections/contacts';
+import { Hero } from '@components/sections/hero';
 
 export function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="flex min-h-screen w-screen flex-col">
       <Navbar />
       <main>
         <Hero />
-        <QuemSomos />
+        <About />
         <Carousel />
-        <Contatos />
+        <Contacts />
       </main>
       <Footer />
     </div>
