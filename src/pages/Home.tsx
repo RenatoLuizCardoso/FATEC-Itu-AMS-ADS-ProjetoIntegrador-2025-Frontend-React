@@ -8,7 +8,7 @@ import { Hero } from '@components/sections/hero';
 
 export function Home() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen w-screen flex-col">
       <Navbar />
       <main>
         <Hero />

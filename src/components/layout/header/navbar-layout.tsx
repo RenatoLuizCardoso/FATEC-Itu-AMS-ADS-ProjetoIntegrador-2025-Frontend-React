@@ -1,28 +1,45 @@
-import { Book, Contact, Home, LogIn, Menu, X } from 'lucide-react';
+import {
+  Book,
+  CalendarCheck,
+  Contact,
+  Home,
+  LogIn,
+  Menu,
+  ScrollText,
+  X,
+} from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router';
-
-type NavbarItemType = 'home' | 'about' | 'contact' | 'login';
-
-type NavbarItem = {
-  type: NavbarItemType;
-  label: string;
-  href: string;
-};
-
-type NavbarLayoutProps = {
-  logoText: string;
-  items: NavbarItem[];
-};
 
 const iconMap = {
   home: Home,
   about: Book,
   contact: Contact,
+  menu: ScrollText,
+  booking: CalendarCheck,
   login: LogIn,
 };
 
-export function NavbarLayout({ logoText, items }: NavbarLayoutProps) {
+type NavbarItemType = keyof typeof iconMap;
+
+export type NavbarItem = {
+  type: NavbarItemType;
+  label: string;
+  href: string;
+  section: 'left' | 'right';
+};
+
+type NavbarLayoutProps = {
+  logoText: string;
+  items: NavbarItem[];
+  className?: string;
+};
+
+export function NavbarLayout({
+  logoText,
+  items,
+  className,
+}: NavbarLayoutProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -41,9 +58,9 @@ export function NavbarLayout({ logoText, items }: NavbarLayoutProps) {
 
   return (
     <nav
-      className={`fixed z-50 mb-2 w-screen px-6 py-5 transition-all duration-300 md:px-10 ${scrolled || isOpen ? 'bg-amber-900 ' : 'bg-transparent'}  `}
+      className={`fixed top-0 left-0 z-50 mb-2 w-full px-6 py-5 transition-all duration-300 md:px-10 ${className} ${scrolled || isOpen ? 'bg-amber-900 ' : 'bg-transparent'}  `}
     >
-      <div className="tems-center container mx-auto flex justify-between px-4 text-amber-50">
+      <div className="container mx-auto flex items-center justify-between px-4 text-amber-50">
         {/* Menu mobile */}
         <div className="flex items-center lg:hidden ">
           <button
@@ -57,19 +74,21 @@ export function NavbarLayout({ logoText, items }: NavbarLayoutProps) {
 
         {/* Links desktop à esquerda */}
         <div className="hidden items-center gap-8 lg:flex">
-          {items.slice(0, -2).map(({ type, label, href }) => {
-            const Icon = iconMap[type];
-            return (
-              <a
-                key={label}
-                href={href}
-                className="flex items-center gap-2 font-medium text-base transition-colors hover:text-yellow-300"
-              >
-                {Icon && <Icon size={18} />}
-                {label}
-              </a>
-            );
-          })}
+          {items
+            .filter((item) => item.section === 'left')
+            .map(({ type, label, href }) => {
+              const Icon = iconMap[type];
+              return (
+                <a
+                  key={type}
+                  href={href}
+                  className="flex items-center gap-2 font-medium text-base transition-colors hover:text-yellow-300"
+                >
+                  {Icon && <Icon size={18} />}
+                  {label}
+                </a>
+              );
+            })}
         </div>
 
         {/* Logo centralizado */}
@@ -85,7 +104,7 @@ export function NavbarLayout({ logoText, items }: NavbarLayoutProps) {
         {/* Links desktop à direita */}
         <div className="hidden items-center gap-4 md:flex">
           {items
-            .filter((item) => item.type === 'contact' || item.type === 'login')
+            .filter((item) => item.section === 'right')
             .map(({ label, href, type }) => {
               const Icon = iconMap[type];
               const isLogin = type === 'login';
@@ -95,7 +114,7 @@ export function NavbarLayout({ logoText, items }: NavbarLayoutProps) {
                   : 'text-amber-50 hover:text-yellow-300 lg:flex'
               }`;
               return isLogin ? (
-                <Link to={href} key={label} className={className}>
+                <Link to={href} key={type} className={className}>
                   {Icon && <Icon size={18} />}
                   {label}
                 </Link>

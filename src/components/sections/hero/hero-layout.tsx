@@ -15,7 +15,7 @@ export function HeroLayout({ title, buttons, img }: HeroProps) {
   return (
     <section
       id="home"
-      className="relative flex min-h-[80vh] w-screen items-center bg-center bg-cover py-16"
+      className="relative flex min-h-[80vh] w-full items-center bg-center bg-cover py-16"
     >
       <div className="absolute inset-0 z-10 bg-black/40">{''}</div>
 

@@ -22,7 +22,7 @@ export function CarouselLayout({ slides }: CarouselProps) {
   };
 
   return (
-    <section className="flex w-screen bg-amber-50 py-5 text-amber-900 sm:py-16">
+    <section className="flex w-full bg-amber-50 py-5 text-amber-900 sm:py-16">
       <div className="mx-auto px-10 md:px-20">
         <div className="carousel h-50 max-w-6xl overflow-hidden rounded-2xl shadow-xl transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl md:h-100 md:max-w-6xl">
           {slides.map(({ id, img, alt }, index) => {

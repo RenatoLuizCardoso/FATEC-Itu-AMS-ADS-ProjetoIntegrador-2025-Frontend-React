@@ -1,29 +1,36 @@
 import { NavbarLayout } from './navbar-layout';
+import type { NavbarItem } from './navbar-layout'; // importa o tipo
+
+const items: NavbarItem[] = [
+  {
+    type: 'home',
+    label: 'Home',
+    href: '#home',
+    section: 'left',
+  },
+  {
+    type: 'about',
+    label: 'Quem Somos',
+    href: '#about',
+    section: 'left',
+  },
+  {
+    type: 'contact',
+    label: 'Contatos',
+    href: '#contact',
+    section: 'right',
+  },
+  {
+    type: 'login',
+    label: 'Login',
+    href: 'login',
+    section: 'right',
+  },
+];
 
 const mockData = {
   logoText: 'logoDaEmpresa',
-  items: [
-    {
-      type: 'home' as const,
-      label: 'Home',
-      href: '#home',
-    },
-    {
-      type: 'about' as const,
-      label: 'Quem Somos',
-      href: '#about',
-    },
-    {
-      type: 'contact' as const,
-      label: 'Contatos',
-      href: '#contact',
-    },
-    {
-      type: 'login' as const,
-      label: 'Login',
-      href: 'login',
-    },
-  ],
+  items,
 };
 
 export function Navbar() {

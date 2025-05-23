@@ -34,8 +34,8 @@ export function FooterLayout({
   contactDetails,
 }: FooterProps) {
   return (
-    <footer className="flex w-screen flex-col items-center bg-wp-green p-5">
-      <div className="mt-8 flex w-[77%] flex-col gap-6 md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-6">
+    <footer className="flex w-full flex-col items-center bg-wp-green p-5">
+      <div className="mt-8 flex w-[77%] max-w-6xl flex-col gap-6 md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-6">
         <FooterSection title={info.title.brand}>
           <p>{info.paragraph}</p>
           <FooterButtonGroup />

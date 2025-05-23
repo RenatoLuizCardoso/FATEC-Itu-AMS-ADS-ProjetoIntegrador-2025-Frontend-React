@@ -35,7 +35,7 @@ export function ContactsLayout({
   return (
     <section
       id="contact"
-      className="w-screen scroll-mt-[5rem] bg-yellow-50 py-8 text-amber-900"
+      className="w-full scroll-mt-[5rem] bg-yellow-50 py-8 text-amber-900"
     >
       <div className="mx-auto max-w-6xl space-y-24 px-10 md:px-20">
         <header className="mx-auto mb-8">
