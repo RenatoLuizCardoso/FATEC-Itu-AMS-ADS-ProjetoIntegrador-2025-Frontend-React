@@ -1,4 +1,9 @@
-import { Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
+import {
+  ChatCircleIcon,
+  EnvelopeSimpleIcon,
+  MapPinIcon,
+  PhoneIcon,
+} from '@phosphor-icons/react';
 
 type ContactItem = {
   type: 'email' | 'address' | 'whatsapp' | 'phone';
@@ -19,10 +24,10 @@ type ContactsProps = {
 };
 
 const iconMap = {
-  email: Mail,
-  address: MapPin,
-  whatsapp: MessageCircle,
-  phone: Phone,
+  email: EnvelopeSimpleIcon,
+  address: MapPinIcon,
+  whatsapp: ChatCircleIcon,
+  phone: PhoneIcon,
 };
 
 export function ContactsLayout({
@@ -50,9 +55,11 @@ export function ContactsLayout({
 
             return (
               <div key={label} className="flex items-center gap-4">
-                <Icon size={20} />
                 <div className="space-y-1">
-                  <h3 className="font-bold text-lg md:text-xl">{label}</h3>
+                  <h3 className="flex items-center gap-2 font-bold text-lg md:text-xl">
+                    <Icon size={24} />
+                    {label}
+                  </h3>
                   <div className="text-amber text-base md:text-lg">
                     {link ? (
                       <a
