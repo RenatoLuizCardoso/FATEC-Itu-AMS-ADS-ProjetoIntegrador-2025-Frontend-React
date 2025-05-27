@@ -1,6 +1,8 @@
+import { categories } from '@components/data/menu-data';
 import { CarouselMenu } from '@components/layout/carousel-menu/carousel-menu';
-import { NavbarLayout } from '@components/layout/header';
-import type { NavbarItem } from '@components/layout/header';
+import { type NavbarItem, NavbarLayout } from '@components/layout/header';
+import { CategorySelector } from '@components/layout/menu/CategorySelector';
+import { useState } from 'react';
 
 const items: NavbarItem[] = [
   {
@@ -24,11 +26,21 @@ const items: NavbarItem[] = [
 ];
 
 export function Menu() {
+  const [activeCategory, setActiveCategory] = useState<string>(categories[0]);
+
   return (
     <div className="flex min-h-screen min-w-screen flex-col bg-white">
       <NavbarLayout logoText="LogoDaEmpresa" items={items} />
       <CarouselMenu />
-      <main>{''}</main>
+
+      <main>
+        {' '}
+        <CategorySelector
+          categories={categories}
+          selected={activeCategory}
+          onSelect={setActiveCategory}
+        />
+      </main>
     </div>
   );
 }
