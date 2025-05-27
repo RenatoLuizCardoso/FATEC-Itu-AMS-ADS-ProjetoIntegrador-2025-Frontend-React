@@ -27,7 +27,7 @@ export const CategorySelector: React.FC<CategorySelectorProps> = ({
   };
 
   return (
-    <section className="flex w-full items-center justify-center bg-gray-500">
+    <section className="flex w-full items-center justify-center shadow-sm">
       <button
         type="button"
         onClick={() => scroll('left')}
@@ -37,16 +37,16 @@ export const CategorySelector: React.FC<CategorySelectorProps> = ({
       </button>
       <div
         ref={containerRef}
-        className="hide-scrollbar flex items-center space-x-2 overflow-x-auto scroll-smooth px-4 py-2"
+        className="hide-scrollbar flex items-center space-x-2 overflow-x-auto scroll-smooth py-4"
       >
         {categories.map((category) => (
           <button
             type="button"
             key={category}
             onClick={() => onSelect(category)}
-            className={`mr-4 whitespace-nowrap rounded-full px-4 py-3 transition-colors ${
+            className={`mr-4 whitespace-nowrap rounded-full px-5 py-2 transition-all duration-300 ${
               selected === category
-                ? 'bg-amber-900 text-white'
+                ? 'bg-amber-900 font-semibold text-white'
                 : 'bg-white text-gray-800 hover:bg-gray-100'
             }
           `}

@@ -1,7 +1,7 @@
 import { categories } from '@components/data/menu-data';
 import { CarouselMenu } from '@components/layout/carousel-menu/carousel-menu';
 import { type NavbarItem, NavbarLayout } from '@components/layout/header';
-import { CategorySelector } from '@components/layout/menu/CategorySelector';
+import { CategorySelector } from '@components/layout/menu/category-menu';
 import { useState } from 'react';
 
 const items: NavbarItem[] = [
@@ -32,9 +32,7 @@ export function Menu() {
     <div className="flex min-h-screen min-w-screen flex-col bg-white">
       <NavbarLayout logoText="LogoDaEmpresa" items={items} />
       <CarouselMenu />
-
       <main>
-        {' '}
         <CategorySelector
           categories={categories}
           selected={activeCategory}
