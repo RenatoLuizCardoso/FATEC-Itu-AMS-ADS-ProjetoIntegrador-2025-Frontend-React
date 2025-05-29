@@ -1,4 +1,4 @@
-import type { MenuItemType } from '@components/layout/menu-item/card-item';
+import type { MenuItemType } from '@components/layout/menu/card-item';
 
 export const categories = [
   'All',

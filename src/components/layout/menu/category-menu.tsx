@@ -27,11 +27,11 @@ export const CategorySelector: React.FC<CategorySelectorProps> = ({
   };
 
   return (
-    <section className="flex w-full items-center justify-center shadow-sm">
+    <section className="flex w-full items-center justify-center px-5 shadow-sm">
       <button
         type="button"
         onClick={() => scroll('left')}
-        className="z-10 flex-shrink-0 bg-gradient-to-r from-neutral-light to-transparent px-2 py-4"
+        className="z-10 flex-shrink-0 bg-gradient-to-r from-neutral-light to-transparent px-1 py-4"
       >
         <CaretLeftIcon size={20} className="text-gray-500" />
       </button>
