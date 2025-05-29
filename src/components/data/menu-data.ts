@@ -130,4 +130,84 @@ export const menuItems: MenuItemType[] = [
       'https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2025-01-fettucini-alfredo%2FFettuccine-Alfredo-0771_ead026-crop',
     categoryId: 'Pasta',
   },
+  {
+    id: 13,
+    name: 'Garlic Breadsticks',
+    description:
+      'Warm, buttery breadsticks with garlic and parsley, served with marinara sauce',
+    price: 7.5,
+    image:
+      'https://www.thespruceeats.com/thmb/MrFtErbJj0GY6eOHZCvU0z5MwA0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/garlic-breadsticks-4150711-hero-01-a1fd1f54ab6a425aa95196cae3a0b2c0.jpg',
+    categoryId: 'Starters',
+  },
+  {
+    id: 14,
+    name: 'Stuffed Mushrooms',
+    description:
+      'Baked mushrooms filled with herbed cream cheese and breadcrumbs',
+    price: 11.0,
+    image:
+      'https://natashaskitchen.com/wp-content/uploads/2023/12/Stuffed-Mushrooms-7-1024x1536.jpg',
+    categoryId: 'Starters',
+  },
+  {
+    id: 15,
+    name: 'Spaghetti Carbonara',
+    description:
+      'Classic Roman pasta with pancetta, parmesan, and a creamy egg sauce',
+    price: 20.0,
+    image:
+      'https://www.umami.recipes/api/image/recipes/jvyITHsCFhlRtUbW1Qgp/images/UnFIikDF0lYbnzCCNaxnEl?w=1080&q=75',
+    categoryId: 'Pasta',
+  },
+  {
+    id: 16,
+    name: 'Pan-Seared Scallops',
+    description:
+      'Tender scallops in garlic herb butter, served with a touch of lemon zest',
+    price: 26.5,
+    image:
+      'https://www.onceuponachef.com/images/2022/03/how-to-cook-scallops-2-scaled-1120x1456.jpg',
+    categoryId: 'Seafood',
+  },
+  {
+    id: 17,
+    name: 'Chicken Parmesan',
+    description:
+      'Breaded chicken breast topped with marinara and mozzarella, served with spaghetti',
+    price: 21.95,
+    image:
+      'https://kalejunkie.com/wp-content/uploads/2024/02/KJChickenParmesan_Shot5_110-1024x1536.jpg',
+    categoryId: 'Main Dishes',
+  },
+  {
+    id: 18,
+    name: 'Gelato Trio',
+    description:
+      'A selection of artisanal gelato flavors: vanilla, pistachio, and strawberry',
+    price: 9.0,
+    image:
+      'https://scontent-gru1-2.xx.fbcdn.net/v/t1.6435-9/58383512_10161681017210182_3708298110808621056_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=A3lH31JX8u0Q7kNvwEmMhpo&_nc_oc=AdkY2RIo20pel1rEheFr3gMT4_EqcqbTkV-KfpFd51Rftsxvq2GnXDS0cxr96dGTI3U&_nc_zt=23&_nc_ht=scontent-gru1-2.xx&_nc_gid=kxKvI4tYEiuBSLR1kixMug&oh=00_AfJnvfVI8wo4JXNCyebXVVr7SrJjOULnfltbS3jhDDmZMA&oe=68603623',
+    categoryId: 'Desserts',
+  },
+  {
+    id: 19,
+    name: 'Negroni',
+    description:
+      'A balanced cocktail with gin, Campari, and sweet vermouth, served over ice',
+    price: 13.0,
+    image:
+      'https://punchdrink.com/wp-content/uploads/2013/10/Artice2-Kingston-Negroni-Rum-Cocktail-Recipe.jpg?resize=500,688',
+    categoryId: 'Drinks',
+  },
+  {
+    id: 20,
+    name: 'Espresso Martini',
+    description:
+      'Velvety coffee-flavored cocktail with vodka, espresso, and coffee liqueur',
+    price: 14.5,
+    image:
+      'https://barossadistilling.com/wp-content/uploads/2024/05/Espresso-Martini-Cocktail-600x600.png',
+    categoryId: 'Drinks',
+  },
 ];
