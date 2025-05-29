@@ -15,7 +15,7 @@ export function CarouselSlideNavigation({
     'cursor-pointer bg-black/40 hover:bg-black/60 rounded-full text-white p-2 transition-colors';
 
   return (
-    <div className="-translate-y-1/2 absolute top-1/2 right-5 left-5 flex transform justify-between">
+    <div className="-translate-y-1/2 absolute top-1/2 right-5 left-5 mx-6 flex transform justify-between">
       <button
         type="button"
         onClick={() => onNavigate(prevSlideId)}

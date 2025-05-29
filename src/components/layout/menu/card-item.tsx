@@ -25,11 +25,15 @@ export function CardItem({ menuItems, onSelectCategory }: menuItemProps) {
             key={id}
             className="grid w-full grid-cols-[40%_60%] rounded-2xl shadow-md/20"
           >
-            <img
-              className="h-45 w-full rounded-l-2xl object-cover"
-              src={image}
-              alt={name}
-            />
+            <div className="relative">
+              <div className="absolute inset-0 rounded-l-2xl bg-black/3" />
+              <img
+                className="h-45 w-full rounded-l-2xl object-cover"
+                src={image}
+                alt={name}
+              />
+            </div>
+
             <header className="relative flex flex-col gap-1 p-5">
               <h1 className="font-semibold text-black text-xl">{name}</h1>
               <p className="text-gray-500">{description}</p>
