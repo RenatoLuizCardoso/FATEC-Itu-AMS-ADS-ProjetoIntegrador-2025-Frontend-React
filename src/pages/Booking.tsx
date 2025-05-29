@@ -24,7 +24,7 @@ const items: NavbarItem[] = [
 
 export function Booking() {
   return (
-    <div className="flex min-h-screen min-w-screen flex-col bg-zinc-500">
+    <div className="flex min-h-screen w-screen flex-col bg-zinc-500">
       <NavbarLayout logoText="LogoDaEmpresa" items={items} />
       <main>{''}</main>
     </div>
