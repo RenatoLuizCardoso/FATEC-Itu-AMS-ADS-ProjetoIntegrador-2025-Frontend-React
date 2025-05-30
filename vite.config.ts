@@ -15,6 +15,7 @@ export default defineConfig({
       biome: {
         command: 'check',
       },
+      overlay: false,
     }),
   ],
 });

@@ -14,6 +14,7 @@ export const CategorySelector: React.FC<CategorySelectorProps> = ({
   onSelect,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const buttonRefs = useRef<Record<string, HTMLButtonElement | null>>({});
 
   const scroll = (direction: 'left' | 'right') => {
     const container = containerRef.current;
@@ -24,6 +25,16 @@ export const CategorySelector: React.FC<CategorySelectorProps> = ({
         behavior: 'smooth',
       });
     }
+  };
+
+  const handleSelect = (category: string) => {
+    onSelect(category);
+    const button = buttonRefs.current[category];
+    button?.scrollIntoView({
+      behavior: 'smooth',
+      inline: 'center',
+      block: 'nearest',
+    });
   };
 
   return (
@@ -43,7 +54,10 @@ export const CategorySelector: React.FC<CategorySelectorProps> = ({
           <button
             type="button"
             key={category}
-            onClick={() => onSelect(category)}
+            ref={(el) => {
+              buttonRefs.current[category] = el;
+            }}
+            onClick={() => handleSelect(category)}
             className={`mr-4 whitespace-nowrap rounded-full px-5 py-2 transition-all duration-300 ${
               selected === category
                 ? 'bg-amber-900 font-semibold text-white'

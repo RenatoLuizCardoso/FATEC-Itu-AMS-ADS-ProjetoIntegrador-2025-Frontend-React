@@ -1,5 +1,5 @@
 import { CarouselSlideNavigation } from '@components/sections/carousel/slide-navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const featuredDishes = [
   {
@@ -46,9 +46,22 @@ export function CarouselMenu() {
 
   const next = featuredDishes[(currentIndex + 1) % featuredDishes.length].id;
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const nextIndex = (currentIndex + 1) % featuredDishes.length;
+      const nextSlideId = featuredDishes[nextIndex].id;
+      document
+        .getElementById(nextSlideId)
+        ?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      setActiveSlide(nextSlideId);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
   return (
     <section className="relative flex">
-      <div className="carousel relative h-[280px] w-full md:h-[80vh]">
+      <div className="carousel relative h-[55vh] w-full md:h-[80vh]">
         {featuredDishes.map(({ id, image, name, description }) => {
           return (
             <article
@@ -63,7 +76,7 @@ export function CarouselMenu() {
                 className="h-full w-full object-cover"
               />
               <header className="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
-                <div className="p-6 py-5">
+                <div className="p-6 py-10 md:py-5">
                   <h1 className="font-cursive font-semibold text-2xl">
                     {name}
                   </h1>
@@ -78,6 +91,7 @@ export function CarouselMenu() {
         prevSlideId={prev}
         nextSlideId={next}
         onNavigate={scrollToSlide}
+        className="hidden sm:block"
       />
       <div className="absolute bottom-0 flex w-full justify-center gap-2 py-7">
         {featuredDishes.map(({ id }, index) => {

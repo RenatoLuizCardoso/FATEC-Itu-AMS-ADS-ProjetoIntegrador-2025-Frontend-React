@@ -1,8 +1,8 @@
-import { categories, menuItems } from '@components/data/menu-data';
 import { CarouselMenu } from '@components/layout/carousel-menu/carousel-menu';
 import { type NavbarItem, NavbarLayout } from '@components/layout/header';
 import { CardItem } from '@components/layout/menu/card-item';
 import { CategorySelector } from '@components/layout/menu/category-menu';
+import { categories, menuItems } from '@data/menu-data';
 import { useState } from 'react';
 
 const items: NavbarItem[] = [

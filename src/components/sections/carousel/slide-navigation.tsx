@@ -4,15 +4,16 @@ type SlideNavigationProps = {
   prevSlideId: string;
   nextSlideId: string;
   onNavigate: (id: string) => void;
+  className?: string;
 };
 
 export function CarouselSlideNavigation({
   prevSlideId,
   nextSlideId,
   onNavigate,
+  className,
 }: SlideNavigationProps) {
-  const commonBtnClass =
-    'cursor-pointer bg-black/40 hover:bg-black/60 rounded-full text-white p-2 transition-colors';
+  const commonBtnClass = `cursor-pointer bg-black/40 hover:bg-black/60 rounded-full text-white p-2 transition-colors ${className}`;
 
   return (
     <div className="-translate-y-1/2 absolute top-1/2 right-5 left-5 mx-6 flex transform justify-between">

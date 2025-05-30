@@ -36,9 +36,11 @@ export function CardItem({ menuItems, onSelectCategory }: menuItemProps) {
 
             <header className="relative flex flex-col gap-1 p-5">
               <h1 className="font-semibold text-black text-xl">{name}</h1>
-              <p className="text-gray-500">{description}</p>
+              <p className="text-gray-500 text-sm md:text-base">
+                {description}
+              </p>
               <span className="absolute right-0 bottom-0 p-4 font-bold text-amber-900 text-xl">
-                ${price}
+                ${price.toFixed(2)}
               </span>
             </header>
           </div>
