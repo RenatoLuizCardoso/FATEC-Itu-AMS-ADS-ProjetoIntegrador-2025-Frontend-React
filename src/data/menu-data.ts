@@ -10,6 +10,30 @@ export const categories = [
   'Drinks',
 ];
 
+export const featuredDishes = [
+  {
+    id: 'slide-0',
+    name: 'Gourmet Steak',
+    image:
+      'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80',
+    description: 'Premium cut with seasonal vegetables',
+  },
+  {
+    id: 'slide-1',
+    name: 'Seafood Delight',
+    image:
+      'https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&q=80',
+    description: 'Fresh catch of the day with lemon butter sauce',
+  },
+  {
+    id: 'slide-2',
+    name: 'Signature Pasta',
+    image:
+      'https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&q=80',
+    description: 'Handmade pasta with truffle cream sauce',
+  },
+];
+
 export const menuItems: MenuItemType[] = [
   {
     id: 1,
