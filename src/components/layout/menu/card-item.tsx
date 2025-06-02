@@ -18,7 +18,7 @@ export function CardItem({ menuItems, onSelectCategory }: menuItemProps) {
       {menuItems
         .filter(
           ({ categoryId }) =>
-            categoryId === onSelectCategory || onSelectCategory === 'All',
+            categoryId === onSelectCategory || onSelectCategory === 'Todos',
         )
         .map(({ id, name, description, price, image }) => (
           <div
@@ -40,7 +40,7 @@ export function CardItem({ menuItems, onSelectCategory }: menuItemProps) {
                 {description}
               </p>
               <span className="absolute right-0 bottom-0 p-4 font-bold text-amber-900 text-xl">
-                ${price.toFixed(2)}
+                R${price.toFixed(2).replace('.', ',')}
               </span>
             </header>
           </div>
