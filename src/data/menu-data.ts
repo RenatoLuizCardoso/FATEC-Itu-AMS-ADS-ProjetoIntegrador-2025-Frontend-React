@@ -1,3 +1,4 @@
+import type { NavbarItem } from '@components/layout/header';
 import type { MenuItemType } from '@components/layout/menu/card-item';
 
 export const categories = [
@@ -233,5 +234,26 @@ export const menuItems: MenuItemType[] = [
     image:
       'https://barossadistilling.com/wp-content/uploads/2024/05/Espresso-Martini-Cocktail-600x600.png',
     categoryId: 'Drinks',
+  },
+];
+
+export const items: NavbarItem[] = [
+  {
+    type: 'login',
+    label: 'Login',
+    href: '/login',
+    section: 'right',
+  },
+  {
+    type: 'home',
+    label: 'Home',
+    href: '/',
+    section: 'left',
+  },
+  {
+    type: 'booking',
+    label: 'Reservar',
+    href: '/booking',
+    section: 'left',
   },
 ];
