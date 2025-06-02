@@ -3,10 +3,9 @@ import {
   CarouselSlide,
   CarouselSlideNavigation,
 } from '@components/layout/carousel-menu';
-import { useCallback, useEffect, useState } from 'react';
-
 import { featuredDishes } from '@data/menu-data';
 import { useCarouselAutoplay } from '@hooks/useCarouselAutoplay';
+import { useCallback, useEffect, useState } from 'react';
 
 export function CarouselMenu() {
   const [activeSlide, setActiveSlide] = useState(featuredDishes[0].id);
