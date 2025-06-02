@@ -31,7 +31,11 @@ export function Menu() {
 
   return (
     <div className="flex min-h-screen max-w-screen flex-col bg-white">
-      <NavbarLayout logoText="LogoDaEmpresa" items={items} />
+      <NavbarLayout
+        logoText="LogoDaEmpresa"
+        items={items}
+        heightScrollSize={0.47}
+      />
       <CarouselMenu />
       <main>
         <CategorySelector
