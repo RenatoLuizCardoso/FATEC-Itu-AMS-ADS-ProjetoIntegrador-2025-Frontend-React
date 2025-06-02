@@ -6,13 +6,11 @@ interface FormFieldProps
 
 export function Field({ id, className, children, ...rest }: FormFieldProps) {
   return (
-    <div className="mb-5">
-      <label className="block" htmlFor={id}>
-        {children}
-      </label>
+    <div className="w-full">
+      <label htmlFor={id}>{children}</label>
       <input
         id={id}
-        className={`rounded-xl border-3 px-4 py-3 leading-tight shadow focus:shadow-outline focus:outline-none ${className}`}
+        className={`w-full rounded-lg border border-zinc-300 p-3 text-sm hover:border-rose-300 focus:outline-none ${className}`}
         {...rest}
       />
     </div>

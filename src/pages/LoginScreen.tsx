@@ -1,9 +1,10 @@
 import { NewAccount } from '@components/layout/new-account';
+import { Container } from '@components/ui/container';
 
 export function LoginScreen() {
   return (
-    <div className="flex min-h-screen w-screen text-amber-900">
+    <Container>
       <NewAccount />
-    </div>
+    </Container>
   );
 }

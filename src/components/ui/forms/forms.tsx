@@ -2,8 +2,14 @@ import type { FormHTMLAttributes, PropsWithChildren } from 'react';
 
 interface FormProps
   extends PropsWithChildren,
-    FormHTMLAttributes<HTMLFormElement> {}
+    FormHTMLAttributes<HTMLFormElement> {
+  title?: string;
+}
 
-export function Form({ children, ...rest }: FormProps) {
-  return <form {...rest}>{children}</form>;
+export function Form({ children, className, title, ...rest }: FormProps) {
+  return (
+    <form className={`flex h-full w-full ${className}`} {...rest}>
+      {children}
+    </form>
+  );
 }

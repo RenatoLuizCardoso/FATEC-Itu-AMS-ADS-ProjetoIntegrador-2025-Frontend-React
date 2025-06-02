@@ -12,7 +12,7 @@ export function Button({ className, type, children, ...rest }: ButtonProps) {
   return (
     <button
       type={type}
-      className={`cursor-pointer rounded-2xl px-4 py-3 shadow focus:shadow-outline focus:outline-none ${className}`}
+      className={`cursor-pointer rounded-lg bg-rose-950 p-3 text-white hover:bg-rose-900 focus:outline-none ${className}`}
       {...rest}
     >
       {children}
