@@ -10,7 +10,7 @@ export function Field({ id, className, children, ...rest }: FormFieldProps) {
       <label htmlFor={id}>{children}</label>
       <input
         id={id}
-        className={`w-full rounded-lg border border-zinc-300 p-3 text-sm hover:border-rose-300 focus:outline-none ${className}`}
+        className={`w-full rounded-lg border border-zinc-300 bg-white p-3 text-sm hover:border-rose-300 focus:outline-none ${className}`}
         {...rest}
       />
     </div>
