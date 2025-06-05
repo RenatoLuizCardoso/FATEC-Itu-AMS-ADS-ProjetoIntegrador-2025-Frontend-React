@@ -6,10 +6,18 @@ import { categories, items, menuItems } from '@data/menu-data';
 import { useState } from 'react';
 
 export function Menu() {
-  const [activeCategory, setActiveCategory] = useState<string>(categories[0]);
+  const [selectedCategory, setSelectedCategory] = useState<string>(
+    categories[0],
+  );
+  const [searchValue, setSearchValue] = useState('');
+
+  const handleSelectCategory = (category: string) => {
+    setSelectedCategory(category);
+    setSearchValue(''); // Limpa a busca
+  };
 
   return (
-    <div className="flex min-h-screen max-w-screen flex-col bg-white">
+    <div className="flex min-h-screen max-w-screen flex-col bg-white ">
       <NavbarLayout
         logoText="LogoDaEmpresa"
         items={items}
@@ -19,10 +27,17 @@ export function Menu() {
       <main>
         <CategorySelector
           categories={categories}
-          selected={activeCategory}
-          onSelect={setActiveCategory}
+          selected={selectedCategory}
+          onSelect={handleSelectCategory}
+          onSearch={setSearchValue}
+          searchValue={searchValue}
         />
-        <CardItem menuItems={menuItems} onSelectCategory={activeCategory} />
+
+        <CardItem
+          menuItems={menuItems}
+          onSelectCategory={selectedCategory}
+          searchValue={searchValue}
+        />
       </main>
     </div>
   );
