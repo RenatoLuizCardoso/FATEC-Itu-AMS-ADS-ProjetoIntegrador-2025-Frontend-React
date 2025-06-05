@@ -1,7 +1,7 @@
 import { type NavbarItem, NavbarLayout } from '@components/layout/header';
-import { BookingSection, InfoSection } from '@components/sections/booking';
-import { Container } from '@components/ui/container';
+import { InfoSection } from '@components/sections/booking';
 import { Button, Field, Form } from '@components/ui/forms';
+import { Card, Container } from '@components/ui/layout';
 import { MapPinIcon } from '@phosphor-icons/react';
 
 const items: NavbarItem[] = [
@@ -34,7 +34,7 @@ export function Booking() {
         className="relative bg-rose-950"
       />
       <main className="mx-6 my-2">
-        <BookingSection className="mb-10 bg-zinc-50">
+        <Card className="mb-10 bg-zinc-50">
           <h4 className="mb-2 font-bold text-3xl">Faça sua Reserva</h4>
           <p className="mb-10 text-sm text-zinc-500">
             Experience exceptional dining in an elegant atmosphere. Our
@@ -54,8 +54,8 @@ export function Booking() {
             <li>Segunda - Sábado: 12:00 - 22:00</li>
             <li>Domingo: Fechado</li>
           </InfoSection>
-        </BookingSection>
-        <BookingSection>
+        </Card>
+        <Card>
           <Form className="flex-col gap-5">
             <div className="flex gap-5">
               <Field placeholder="Selecione" id="booking_date">
@@ -77,7 +77,7 @@ export function Booking() {
             </Field>
             <Button type="submit">Confirmar Reserva</Button>
           </Form>
-        </BookingSection>
+        </Card>
       </main>
     </Container>
   );

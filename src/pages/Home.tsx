@@ -4,7 +4,7 @@ import { About } from '@components/sections/about';
 import { Carousel } from '@components/sections/carousel';
 import { Contacts } from '@components/sections/contacts';
 import { Hero } from '@components/sections/hero';
-import { Container } from '@components/ui/container';
+import { Container } from '@components/ui/layout';
 
 export function Home() {
   return (
