@@ -1,14 +1,17 @@
-import type { PropsWithChildren } from 'react';
+import type { HTMLAttributes, PropsWithChildren } from 'react';
 
-interface InfoSectionProps extends PropsWithChildren {
-  title: string;
-}
+interface BookingSectionProps
+  extends PropsWithChildren,
+    HTMLAttributes<HTMLElement> {}
 
-export function InfoSection({ title, children }: InfoSectionProps) {
+export function BookingSection({
+  children,
+  className,
+  ...rest
+}: BookingSectionProps) {
   return (
-    <>
-      <h6>{title}</h6>
-      <ul className="mb-4 text-sm text-zinc-500">{children}</ul>
-    </>
+    <section className={`rounded-lg p-5 shadow ${className}`} {...rest}>
+      {children}
+    </section>
   );
 }
