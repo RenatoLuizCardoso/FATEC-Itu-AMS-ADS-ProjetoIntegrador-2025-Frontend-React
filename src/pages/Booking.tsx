@@ -1,5 +1,5 @@
-import { NavbarLayout } from '@components/layout/header';
-import type { NavbarItem } from '@components/layout/header';
+import { type NavbarItem, NavbarLayout } from '@components/layout/header';
+import { Container } from '@components/ui/container';
 
 const items: NavbarItem[] = [
   {
@@ -24,8 +24,22 @@ const items: NavbarItem[] = [
 
 export function Booking() {
   return (
-    <div className="flex min-h-screen w-screen flex-col bg-zinc-500">
-      <NavbarLayout logoText="LogoDaEmpresa" items={items} />
-    </div>
+    <Container>
+      <NavbarLayout
+        logoText="LogoDaEmpresa"
+        items={items}
+        className="relative bg-rose-950"
+      />
+      <main className="mx-6 my-2">
+        <section className="rounded-lg bg-zinc-50 p-5 shadow">
+          <h3 className="mb-2 font-bold text-3xl">Faça sua Reserva</h3>
+          <p className="mb-6 text-sm text-zinc-600">
+            Experience exceptional dining in an elegant atmosphere. Our
+            carefully crafted menu features the finest ingredient and innovative
+            culinary techniques.
+          </p>
+        </section>
+      </main>
+    </Container>
   );
 }
