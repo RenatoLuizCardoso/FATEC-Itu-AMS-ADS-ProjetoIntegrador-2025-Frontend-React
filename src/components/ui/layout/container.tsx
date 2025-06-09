@@ -7,7 +7,7 @@ interface PropsContainer
 export function Container({ children, className, ...rest }: PropsContainer) {
   return (
     <div
-      className={`flex h-screen w-screen flex-col bg-white text-rose-950 ${className}`}
+      className={`flex min-h-screen max-w-screen flex-col bg-white text-rose-950 ${className}`}
       {...rest}
     >
       {children}

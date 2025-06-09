@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "biome check --fix",
     "lint:ci": "biome ci",
-    "typecheck": "tsc -b",
+    "typecheck": "tsc-files --project tsconfig.app.json",
+    "typecheck:ci": "tsc -b",
     "lint-staged": "lint-staged",
     "commitlint": "commitlint --edit",
     "preview": "vite preview",
@@ -34,11 +35,13 @@
     "globals": "^15.15.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.1",
+    "tsc-files": "^1.1.4",
     "typescript": "~5.7.2",
     "vite": "^6.2.0",
     "vite-plugin-checker": "^0.9.3"
   },
   "lint-staged": {
-    "*.(js|ts|jsx|tsx|json|jsonc)": "npm run lint"
+    "*.(js|ts|jsx|tsx|json|jsonc)": "npm run lint",
+    "*.(ts|tsx)": "npm run typecheck"
   }
 }
