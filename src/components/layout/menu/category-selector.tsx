@@ -30,31 +30,33 @@ export const CategorySelector: React.FC<CategorySelectorProps> = ({
   };
 
   return (
-    <section className="flex w-full items-center justify-center gap-5 shadow-sm">
-      <ArrowButton direction="left" onClick={() => scroll('left')} />
-      <div
-        ref={containerRef}
-        className="hide-scrollbar flex w-133 items-center space-x-3 overflow-x-auto scroll-smooth py-4"
-      >
-        {categories.map((category) => (
-          <CategoryButton
-            key={category}
-            category={category}
-            isSelected={selected === category}
-            onClick={() => onSelect(category)}
-            ref={(el) => {
-              buttonRefs.current[category] = el;
-            }}
-          />
-        ))}
+    <section className="w-full max-w-full px-4 py-2 md:px-8">
+      <div className="grid w-full grid-cols-[auto_1fr_auto] items-center gap-2 overflow-hidden">
+        <ArrowButton direction="left" onClick={() => scroll('left')} />
+        <div
+          ref={containerRef}
+          className="hide-scrollbar flex w-full gap-2 overflow-x-auto scroll-smooth whitespace-nowrap py-2"
+        >
+          {categories.map((category) => (
+            <CategoryButton
+              key={category}
+              category={category}
+              isSelected={selected === category}
+              onClick={() => onSelect(category)}
+              ref={(el) => {
+                buttonRefs.current[category] = el;
+              }}
+            />
+          ))}
+        </div>
+        <ArrowButton direction="right" onClick={() => scroll('right')} />
       </div>
-      <ArrowButton direction="right" onClick={() => scroll('right')} />
       <input
         type="text"
         value={searchValue}
         onChange={(e) => onSearch(e.target.value)}
         placeholder="Buscar no cardápio..."
-        className="h-[3rem] rounded-md border-none bg-zinc-100 pl-5 text-sm shadow-sm outline-none ring-0 transition focus:border-amber-900 focus:outline-none focus:ring-1 focus:ring-amber-900"
+        className="mt-4 w-full rounded-md bg-zinc-100 px-4 py-3 text-sm shadow-sm outline-none ring-0 transition focus:ring-1 focus:ring-amber-900"
       />
     </section>
   );
