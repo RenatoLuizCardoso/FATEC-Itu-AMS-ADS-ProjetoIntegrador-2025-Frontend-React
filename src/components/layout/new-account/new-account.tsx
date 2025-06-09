@@ -3,7 +3,7 @@ import { Button, Field, Form } from '@components/ui/forms';
 export function NewAccount() {
   return (
     <Form className="flex-col gap-6">
-      <h1 className="text-3xl">Cadastrar</h1>
+      <h1 className="text-3xl lg:text-5xl">Cadastrar</h1>
       <Field id="idName" type="text" placeholder="Digite seu nome">
         Nome Completo
       </Field>

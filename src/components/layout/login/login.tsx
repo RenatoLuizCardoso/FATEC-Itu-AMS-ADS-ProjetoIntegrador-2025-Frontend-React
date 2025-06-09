@@ -3,7 +3,7 @@ import { Button, Field, Form } from '@components/ui/forms';
 export function Login() {
   return (
     <Form className="flex-col gap-6">
-      <h1 className="text-3xl">Login</h1>
+      <h1 className="text-3xl lg:text-5xl">Login</h1>
       <Field id="idEmail" type="email" placeholder="Digite seu email">
         Email
       </Field>
