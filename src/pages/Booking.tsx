@@ -19,7 +19,7 @@ const items: NavbarItem[] = [
   },
   {
     type: 'menu',
-    label: 'Cardapio',
+    label: 'Cardápio',
     href: '/menu',
     section: 'left',
   },

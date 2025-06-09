@@ -1,2 +1,3 @@
 npm run typecheck:ci
+npm run spellcheck .
 npm run lint:ci
