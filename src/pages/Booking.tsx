@@ -33,8 +33,8 @@ export function Booking() {
         items={items}
         className="relative bg-rose-950"
       />
-      <main className="mx-6 my-2">
-        <Card className="mb-10 bg-zinc-50">
+      <main className="m-6 flex h-full grow grid-cols-3 flex-col gap-8 lg:grid">
+        <Card className="bg-zinc-50">
           <h4 className="mb-2 font-bold text-3xl">Faça sua Reserva</h4>
           <p className="mb-10 text-sm text-zinc-500">
             Experience exceptional dining in an elegant atmosphere. Our
@@ -55,7 +55,7 @@ export function Booking() {
             <li>Domingo: Fechado</li>
           </InfoSection>
         </Card>
-        <Card>
+        <Card className="col-span-2">
           <Form className="flex-col gap-5">
             <div className="flex gap-5">
               <Field placeholder="Selecione" id="booking_date">
