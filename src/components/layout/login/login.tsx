@@ -1,8 +1,8 @@
 import { Button, Field, Form } from '@components/ui/forms';
 
-export function Login() {
+export function Login({ onChangeScreen }: { onChangeScreen: () => void }) {
   return (
-    <Form className="flex-col gap-6">
+    <Form className="flex-col gap-8">
       <h1 className="text-3xl lg:text-5xl">Login</h1>
       <Field id="idEmail" type="email" placeholder="Digite seu email">
         Email
@@ -17,6 +17,10 @@ export function Login() {
       </div>
 
       <Button type="submit">Avançar</Button>
+
+      <Button type="button" onClick={onChangeScreen}>
+        Nova Conta
+      </Button>
     </Form>
   );
 }
