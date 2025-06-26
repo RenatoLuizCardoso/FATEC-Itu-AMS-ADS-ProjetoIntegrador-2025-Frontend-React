@@ -11,13 +11,11 @@ export function LoginScreen() {
   return (
     <Container className="items-center justify-center lg:text-xl">
       <Card className="my-10 w-full max-w-md lg:max-w-xl">
-        <div>
-          {selectedOption === 'login' ? (
-            <Login onChangeScreen={() => setSelectedOption('newAccount')} />
-          ) : (
-            <NewAccount onChangeScreen={() => setSelectedOption('login')} />
-          )}
-        </div>
+        {selectedOption === 'login' ? (
+          <Login onChangeScreen={() => setSelectedOption('newAccount')} />
+        ) : (
+          <NewAccount onChangeScreen={() => setSelectedOption('login')} />
+        )}
       </Card>
     </Container>
   );
