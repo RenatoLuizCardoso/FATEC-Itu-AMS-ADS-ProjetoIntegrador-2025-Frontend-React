@@ -10,7 +10,7 @@ export function LoginScreen() {
 
   return (
     <Container className="items-center justify-center lg:text-xl">
-      <Card className="w-full max-w-md lg:max-w-xl">
+      <Card className="my-10 w-full max-w-md lg:max-w-xl">
         <div>
           {selectedOption === 'login' ? (
             <Login onChangeScreen={() => setSelectedOption('newAccount')} />
