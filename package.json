@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "biome check --fix",
     "lint:ci": "biome ci",
-    "typecheck": "tsc -b",
+    "typecheck": "tsc-files --project tsconfig.app.json",
+    "spellcheck": "cspell",
+    "typecheck:ci": "tsc -b",
     "lint-staged": "lint-staged",
     "commitlint": "commitlint --edit",
     "preview": "vite preview",
@@ -25,20 +27,25 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@cspell/dict-pt-br": "^2.4.0",
+    "@cspell/dict-pt-pt": "^3.0.4",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react-swc": "^3.8.0",
     "commitlint": "^19.8.0",
     "commitlint-config-gitmoji": "^2.3.1",
+    "cspell": "^9.0.2",
     "daisyui": "^5.0.35",
     "globals": "^15.15.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.1",
+    "tsc-files": "^1.1.4",
     "typescript": "~5.7.2",
     "vite": "^6.2.0",
     "vite-plugin-checker": "^0.9.3"
   },
   "lint-staged": {
-    "*.(js|ts|jsx|tsx|json|jsonc)": "npm run lint"
+    "*.(js|ts|jsx|tsx|json|jsonc)": "npm run lint",
+    "*.(ts|tsx)": "npm run typecheck"
   }
 }
