@@ -65,7 +65,7 @@ export function ContactsLayout({
                       <a
                         href={link}
                         target="_blank"
-                        rel="noooper noreferrer"
+                        rel="noopener noreferrer"
                         className={style}
                       >
                         {' '}
