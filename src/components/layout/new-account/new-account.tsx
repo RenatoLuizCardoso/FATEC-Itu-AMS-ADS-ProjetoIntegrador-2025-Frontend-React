@@ -1,9 +1,10 @@
 import { Button, Field, Form } from '@components/ui/forms';
+import { Link } from '@components/ui/layout/';
 
-export function NewAccount() {
+export function NewAccount({ onChangeScreen }: { onChangeScreen: () => void }) {
   return (
     <Form className="flex-col gap-6">
-      <h1 className="text-3xl">Cadastrar</h1>
+      <h1 className="text-3xl lg:text-5xl">Cadastrar</h1>
       <Field id="idName" type="text" placeholder="Digite seu nome">
         Nome Completo
       </Field>
@@ -19,8 +20,10 @@ export function NewAccount() {
       <Field id="idPassConfirm" type="password" placeholder="**********">
         Confirme sua Senha
       </Field>
-
-      <Button type="submit">Avançar</Button>
+      <Button type="submit">Criar conta</Button>
+      <Link className="mx-auto" onClick={onChangeScreen}>
+        Já tenho uma conta
+      </Link>
     </Form>
   );
 }
