@@ -12,7 +12,7 @@ export function Login({ onChangeScreen }: { onChangeScreen: () => void }) {
         <Field id="idPass" type="password" placeholder="**********">
           Digite a Senha
         </Field>
-        <Link href="">Esqueci a senha</Link>
+        <Link>Esqueci a senha</Link>
       </div>
       <Button type="submit">Entrar</Button>
       <Link className="mx-auto" onClick={onChangeScreen}>
