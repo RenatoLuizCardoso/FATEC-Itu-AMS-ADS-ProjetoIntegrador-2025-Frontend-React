@@ -35,6 +35,9 @@ jobs:
           install: true
           cache: true
 
+      - name: Install Dependencies
+        run: npm install
+
       - name: Typecheck
         run: npm run typecheck:ci
 

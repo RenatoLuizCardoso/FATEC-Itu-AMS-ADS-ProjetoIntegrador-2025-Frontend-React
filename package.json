@@ -29,7 +29,6 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@cspell/dict-pt-br": "^2.4.0",
-    "@cspell/dict-pt-pt": "^3.0.4",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react-swc": "^3.8.0",
