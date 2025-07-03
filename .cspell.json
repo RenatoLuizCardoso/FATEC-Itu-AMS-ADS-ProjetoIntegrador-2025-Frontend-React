@@ -3,13 +3,13 @@
   "version": "0.2",
   "ignorePaths": ["node_modules", "public", "dist", ".cspell.json", ".vscode"],
   "language": "en, pt, pt-BR",
-  "words": [
-    "commitlint",
-    "daisyui",
-    "fatec",
-    "gitmoji",
-    "tailwindcss",
-    "whatsapp"
+  "dictionaryDefinitions": [
+    {
+      "name": "web-pi-dict",
+      "path": "./webpi.dict.txt",
+      "addWords": true
+    }
   ],
+  "dictionaries": ["web-pi-dict"],
   "import": ["@cspell/dict-pt-br/cspell-ext.json"]
 }
