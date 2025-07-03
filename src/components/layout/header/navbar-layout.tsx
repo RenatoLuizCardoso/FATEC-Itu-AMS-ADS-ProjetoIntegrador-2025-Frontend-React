@@ -33,12 +33,14 @@ type NavbarLayoutProps = {
   logoText: string;
   items: NavbarItem[];
   className?: string;
+  heightScrollSize?: number;
 };
 
 export function NavbarLayout({
   logoText,
   items,
   className,
+  heightScrollSize = 0.6,
 }: NavbarLayoutProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -46,7 +48,7 @@ export function NavbarLayout({
   useEffect(() => {
     function handleScroll() {
       const offset = window.scrollY;
-      setScrolled(offset > window.innerHeight * 0.6); // Quando passar da hero
+      setScrolled(offset > window.innerHeight * heightScrollSize);
     }
 
     window.addEventListener('scroll', handleScroll);
@@ -54,7 +56,7 @@ export function NavbarLayout({
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [heightScrollSize]);
 
   return (
     <nav

@@ -1,0 +1,14 @@
+bruschetta
+campari
+carpaccio
+commitlint
+daisyui
+fatec
+gelato
+gelatos
+gitmoji
+negroni
+pancetta
+parmegiana
+tailwindcss
+whatsapp
