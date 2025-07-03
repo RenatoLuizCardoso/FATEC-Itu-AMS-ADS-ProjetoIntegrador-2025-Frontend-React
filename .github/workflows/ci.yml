@@ -21,6 +21,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-npm-cache-
 
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-modules-
+
       - name: Install tools via mise
         uses: jdx/mise-action@v2
         with:
@@ -33,6 +41,8 @@ jobs:
       - name: Typecheck
         run: npm run typecheck:ci
 
+      - name: Spellcheck
+        run: npm run spellcheck:ci
+
       - name: Linter and Formatter
         run: npm run lint:ci
-
