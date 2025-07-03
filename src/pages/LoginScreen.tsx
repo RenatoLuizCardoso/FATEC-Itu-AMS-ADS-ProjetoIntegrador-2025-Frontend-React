@@ -15,7 +15,7 @@ const items: NavbarItem[] = [
     type: 'menu',
     label: 'Cardápio',
     href: '/menu',
-    section: 'left',
+    section: 'right',
   },
 ];
 
@@ -32,7 +32,7 @@ export function LoginScreen() {
         className="relative bg-rose-950"
       />
       <main className="lg:text-xl">
-        <Card className="my-10 w-full max-w-md lg:max-w-xl">
+        <Card className="my-10 w-full max-w-md px-10 shadow-xl lg:max-w-xl">
           {selectedOption === 'login' ? (
             <Login onChangeScreen={() => setSelectedOption('newAccount')} />
           ) : (
