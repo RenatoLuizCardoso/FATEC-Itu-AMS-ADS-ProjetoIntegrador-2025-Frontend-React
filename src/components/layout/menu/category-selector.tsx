@@ -56,7 +56,7 @@ export const CategorySelector: React.FC<CategorySelectorProps> = ({
         value={searchValue}
         onChange={(e) => onSearch(e.target.value)}
         placeholder="Buscar no cardápio..."
-        className="mt-4 w-full rounded-md bg-zinc-100 px-4 py-3 text-sm shadow-sm outline-none ring-0 transition focus:ring-1 focus:ring-amber-900"
+        className="mt-4 w-full rounded-md bg-zinc-100 px-4 py-3 text-black text-sm shadow-sm outline-none ring-0 transition focus:ring-1 focus:ring-amber-900"
       />
     </section>
   );
