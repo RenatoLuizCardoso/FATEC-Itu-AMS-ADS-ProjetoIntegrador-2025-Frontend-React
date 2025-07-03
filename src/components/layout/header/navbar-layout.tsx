@@ -60,7 +60,7 @@ export function NavbarLayout({
 
   return (
     <nav
-      className={`fixed top-0 left-0 z-50 mb-2 w-full px-6 py-5 transition-all duration-300 md:px-10 ${className} ${scrolled || isOpen ? 'bg-amber-900 ' : 'bg-transparent'}  `}
+      className={`fixed top-0 left-0 z-50 mb-2 w-full px-6 py-5 transition-all duration-300 md:px-10 ${className} ${scrolled || isOpen ? 'bg-amber-900 ' : 'bg-amber-900/0'}  `}
     >
       <div className="container mx-auto flex items-center justify-between px-4 text-amber-50">
         {/* Menu mobile */}
