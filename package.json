@@ -10,7 +10,7 @@
     "lint:ci": "biome ci",
     "typecheck": "tsc-files --project tsconfig.app.json",
     "spellcheck": "cspell",
-    "spellcheck:ci": "cspell .",
+    "spellcheck:ci": "cspell --no-progress .",
     "typecheck:ci": "tsc -b",
     "lint-staged": "lint-staged",
     "commitlint": "commitlint --edit",
@@ -46,7 +46,7 @@
   },
   "lint-staged": {
     "*.(js|ts|jsx|tsx|json|jsonc)": "npm run lint",
-    "*": "npm run spellcheck",
+    "*": "npm run spellcheck:ci",
     "*.(ts|tsx)": "npm run typecheck"
   }
 }

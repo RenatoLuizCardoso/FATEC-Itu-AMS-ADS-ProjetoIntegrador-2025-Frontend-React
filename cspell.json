@@ -1,7 +1,15 @@
 {
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
   "version": "0.2",
-  "ignorePaths": ["node_modules", "public", "dist", "cspell.json", ".vscode"],
+  "ignorePaths": [
+    "node_modules",
+    "public",
+    "dist",
+    "cspell.json",
+    ".vscode",
+    "prototypes",
+    ".gitmodules"
+  ],
   "language": "en, pt, pt-BR",
   "dictionaryDefinitions": [
     {
