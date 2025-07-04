@@ -1,3 +1,15 @@
 [submodule "prototypes/unused-reservas"]
 	path = prototypes/unused-reservas
 	url = git@github.com:juliacanavezzi/rubaiyat-reservation-flow
+[submodule "prototypes/reservas"]
+	path = prototypes/reservas
+	url = git@github.com:juliacanavezzi/scarlet-table-reserve
+[submodule "prototypes/garcom"]
+	path = prototypes/garcom
+	url = git@github.com:juliacanavezzi/vinho-comanda-digital
+[submodule "prototypes/minhas-reservas"]
+	path = prototypes/minhas-reservas
+	url = git@github.com:juliacanavezzi/foodie-reservation-view
+[submodule "prototypes/cardapio"]
+	path = prototypes/cardapio
+	url = git@github.com:juliacanavezzi/cardapio-canvas-elegance-26
